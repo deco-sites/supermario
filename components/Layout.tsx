@@ -1,6 +1,6 @@
 import { ComponentChildren } from "preact";
 
-interface Props {
+export interface Props {
   children: ComponentChildren;
 }
 

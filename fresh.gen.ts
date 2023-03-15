@@ -11,8 +11,8 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Informacoes.tsx";
-import * as $$$3 from "./sections/Layout.tsx";
+import * as $$$2 from "./sections/Header.tsx";
+import * as $$$3 from "./sections/Informacoes.tsx";
 import * as $$$4 from "./sections/Markdown.tsx";
 import * as $$$5 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
@@ -28,8 +28,8 @@ const manifest: DecoManifest = {
   sections: {
     "./sections/GetStarted.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
-    "./sections/Informacoes.tsx": $$$2,
-    "./sections/Layout.tsx": $$$3,
+    "./sections/Header.tsx": $$$2,
+    "./sections/Informacoes.tsx": $$$3,
     "./sections/Markdown.tsx": $$$4,
     "./sections/QuillText.tsx": $$$5,
   },
@@ -101,6 +101,22 @@ const manifest: DecoManifest = {
       },
       "outputSchema": null,
     },
+    "./sections/Header.tsx": {
+      "inputSchema": {
+        "title": " Header",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
+        },
+        "required": [
+          "title",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/Informacoes.tsx": {
       "inputSchema": {
         "title": " Informacoes",
@@ -115,10 +131,6 @@ const manifest: DecoManifest = {
           "title",
         ],
       },
-      "outputSchema": null,
-    },
-    "./sections/Layout.tsx": {
-      "inputSchema": null,
       "outputSchema": null,
     },
     "./sections/Markdown.tsx": {

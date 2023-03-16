@@ -114,8 +114,8 @@ const manifest: DecoManifest = {
             "type": "string",
             "title": "Menu Name",
           },
-          "logoProps": {
-            "title": "Logo Props",
+          "imageProps": {
+            "title": "Image Props",
             "type": "object",
             "properties": {
               "altText": {
@@ -137,6 +137,20 @@ const manifest: DecoManifest = {
                 "type": "string",
                 "title": "Src",
               },
+              "className": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Class Name",
+              },
+              "preCarregarImagem": {
+                "type": [
+                  "boolean",
+                  "null",
+                ],
+                "title": "Pre Carregar Imagem",
+              },
             },
             "required": [
               "src",
@@ -146,7 +160,7 @@ const manifest: DecoManifest = {
         "required": [
           "active",
           "menuName",
-          "logoProps",
+          "imageProps",
         ],
       },
       "outputSchema": null,

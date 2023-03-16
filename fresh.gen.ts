@@ -106,13 +106,47 @@ const manifest: DecoManifest = {
         "title": " Header",
         "type": "object",
         "properties": {
-          "title": {
+          "active": {
             "type": "string",
-            "title": "Title",
+            "title": "Active",
+          },
+          "menuName": {
+            "type": "string",
+            "title": "Menu Name",
+          },
+          "logoProps": {
+            "title": "Logo Props",
+            "type": "object",
+            "properties": {
+              "altText": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Alt Text",
+              },
+              "title": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Title",
+              },
+              "src": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Src",
+              },
+            },
+            "required": [
+              "src",
+            ],
           },
         },
         "required": [
-          "title",
+          "active",
+          "menuName",
+          "logoProps",
         ],
       },
       "outputSchema": null,

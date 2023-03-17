@@ -5,21 +5,23 @@ export interface ImageProps {
     altText?: string;
     title?: string
     src: Image;
-    className?: string;
     preCarregarImagem?: boolean;
   }
 
-  export default function Image({ altText, src, title, className, preCarregarImagem}: ImageProps){
+  export default function Image({ altText, src, title, preCarregarImagem}: ImageProps, classNames:string){
+   
     return (
       <>
       {
         preCarregarImagem
-        ? <Head><link rel="preload" as="image" href={src} /></Head>
+        ? <Head>
+            <link rel="preload" as="image" href={src} />
+          </Head>
         :null
       }
       
       <img
-            class={className}
+            class={classNames}
             src={src}
             alt={altText}
             title={title}

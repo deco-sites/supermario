@@ -3,21 +3,17 @@ import {type ImageProps} from "$start/components/atoms/Image.tsx";
 
 export type Props = {
   active: string;
-  /** @title Número de produtos */
-  /** @description Total de produtos para mostrar na vitrine */
-  menuName: string;
+  /** @title nome do item do menu */
+  menu:{
+    itemName:string[],
+    itemUrl: string[]
+  },
   imageProps: ImageProps;
 };
 
-// export type LogoProps{
-
-// }
-
-export default function Header({imageProps, menuName, active }: Props) {
+export default function Header({imageProps, menu, active }: Props) {
   const menus = [
-    { name: menuName || "Home", href: "/" },
-    { name: menuName || "Components", href: "/" },
-    { name: menuName || "Docs", href: "/" },
+    { name: menu || "Docs", href: "/" },
   ];
 
   return (
@@ -37,7 +33,6 @@ export default function Header({imageProps, menuName, active }: Props) {
                 (menu.href === active ? " font-bold border-b-2" : "")}
             >
               {menu.name}
-              {menuName}
             </a>
           </li>
         ))}

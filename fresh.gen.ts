@@ -106,10 +106,6 @@ const manifest: DecoManifest = {
         "title": " Header",
         "type": "object",
         "properties": {
-          "active": {
-            "type": "string",
-            "title": "Active",
-          },
           "menu": {
             "title": "Menu",
             "type": "object",
@@ -131,7 +127,6 @@ const manifest: DecoManifest = {
             },
             "required": [
               "itemName",
-              "itemUrl",
             ],
           },
           "imageProps": {
@@ -157,6 +152,10 @@ const manifest: DecoManifest = {
                 "type": "string",
                 "title": "Src",
               },
+              "className": {
+                "type": "string",
+                "title": "Class Name",
+              },
               "preCarregarImagem": {
                 "type": [
                   "boolean",
@@ -167,11 +166,11 @@ const manifest: DecoManifest = {
             },
             "required": [
               "src",
+              "className",
             ],
           },
         },
         "required": [
-          "active",
           "menu",
           "imageProps",
         ],

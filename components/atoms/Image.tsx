@@ -3,12 +3,13 @@ import {Head} from "$fresh/runtime.ts";
 
 export interface ImageProps {
     altText?: string;
-    title?: string
+    title?: string;
     src: Image;
+    className:string;
     preCarregarImagem?: boolean;
   }
 
-  export default function Image({ altText, src, title, preCarregarImagem}: ImageProps, classNames:string){
+  export default function Image({ altText, title, src, className, preCarregarImagem}: ImageProps){
    
     return (
       <>
@@ -21,7 +22,7 @@ export interface ImageProps {
       }
       
       <img
-            class={classNames}
+            class={className}
             src={src}
             alt={altText}
             title={title}

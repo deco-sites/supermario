@@ -33,7 +33,7 @@ export default function Header({imageProps, menu}: Props) {
           
           <li>
             <a
-              href={menus[0]?.itemUrl?.[index].toString().replace(",","").replace(" ","") || "/"}
+              href={menus[0]?.itemUrl?.[index].toString().replaceAll(",","").replaceAll(" ","") || "/"}
               class={"text-gray-500 hover:text-gray-700 py-1 border-gray-500"}
             >
               {name}

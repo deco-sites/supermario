@@ -1,0 +1,14 @@
+# This pass/fails a build with LHCI assertions via an rc-file.
+name: LHCI-assert-on-lighthouserc
+on: push
+jobs:
+  assert-on-lighthouserc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Lighthouse on urls and validate with lighthouserc
+        uses: ./
+        with:
+          urls: 'https://supermario.deco.site/'
+          configPath: '.github/lighthouse/lighthouserc-assertions.json'
+          uploadArtifacts: true

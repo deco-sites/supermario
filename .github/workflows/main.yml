@@ -1,23 +1,39 @@
-name: Lighthouse CI
+# name: Lighthouse CI
+# on: push
+# jobs:
+#   lighthouse:
+#     runs-on: ${{ matrix.os }}
+#     strategy:
+#       matrix:
+#         # os: [ ubuntu-latest, macos-12, windows-2022 ]
+#         os: [ubuntu-latest]
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: denoland/setup-deno@v1.1.1
+#         with:
+#           deno-version: v1.x # Run with latest stable Deno.
+#       - name: Audit URLs using Lighthouse
+#         uses: treosh/lighthouse-ci-action@v9
+#         with:
+#           urls: |
+#             https://supermario.deco.site/
+#           budgetPath: .github/workflows/budget.json # test performance budgets
+#           configPath: '.github/lighthouse/lighthouserc-assertions.json'
+#           uploadArtifacts: true # save results as an action artifacts
+#           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+
+
+name: CI
 on: push
 jobs:
-  lighthouse:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        # os: [ ubuntu-latest, macos-12, windows-2022 ]
-        os: [ubuntu-latest]
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: denoland/setup-deno@v1.1.1
+      - name: Use node 16
+        uses: actions/setup-node@v3
         with:
-          deno-version: v1.x # Run with latest stable Deno.
-      # - name: Audit URLs using Lighthouse
-      #   uses: treosh/lighthouse-ci-action@v9
-      #   with:
-      #     urls: |
-      #       https://supermario.deco.site/
-      #     budgetPath: .github/workflows/budget.json # test performance budgets
-      #     configPath: '.github/lighthouse/lighthouserc-assertions.json'
-      #     uploadArtifacts: true # save results as an action artifacts
-      #     temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+          node-version: '16'
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn test

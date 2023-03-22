@@ -27,6 +27,7 @@ export default function Image(
         src={src}
         alt={altText}
         title={title}
+        preload="true"
       />
     </>
   );

@@ -12,10 +12,10 @@ jobs:
       - uses: denoland/setup-deno@v1.1.1
         with:
           deno-version: v1.x # Run with latest stable Deno.
+          -run: deno githooks pre-commit
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v9
         with:
-          -run: deno githooks pre-commit
           urls: |
             https://supermario.deco.site/
           budgetPath: .github/workflows/budget.json # test performance budgets

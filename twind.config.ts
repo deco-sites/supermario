@@ -18,7 +18,7 @@ export default {
       fontFamily: {
         sans: ["Albert Sans", "sans-serif"],
         serif: ["serif"],
-      }
+      },
     },
   },
 };

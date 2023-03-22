@@ -113,18 +113,21 @@ const manifest: DecoManifest = {
               "type": "object",
               "properties": {
                 "itemName": {
-                  "type": "string",
+                  "type": [
+                    "string",
+                    "null",
+                  ],
                   "title": "Item Name",
                 },
                 "itemUrl": {
-                  "type": "string",
+                  "type": [
+                    "string",
+                    "null",
+                  ],
                   "title": "Item Url",
                 },
               },
-              "required": [
-                "itemName",
-                "itemUrl",
-              ],
+              "required": [],
             },
             "title": "Menu",
           },

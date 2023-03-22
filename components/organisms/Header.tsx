@@ -8,8 +8,8 @@ export type Props = {
 };
 
 export interface menuItem {
-  itemName: string;
-  itemUrl: string;
+  itemName?: string;
+  itemUrl?: string;
 }
 
 export default function Header({ imageProps, menu }: Props) {

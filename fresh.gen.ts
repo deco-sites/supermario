@@ -107,27 +107,26 @@ const manifest: DecoManifest = {
         "type": "object",
         "properties": {
           "menu": {
-            "title": "Menu",
-            "type": "object",
-            "properties": {
-              "itemName": {
-                "type": "array",
-                "items": {
+            "type": "array",
+            "items": {
+              "title": "menuItem",
+              "type": "object",
+              "properties": {
+                "itemName": {
                   "type": "string",
+                  "title": "Item Name",
                 },
-                "title": "Item Name",
-              },
-              "itemUrl": {
-                "type": "array",
-                "items": {
+                "itemUrl": {
                   "type": "string",
+                  "title": "Item Url",
                 },
-                "title": "Item Url",
               },
+              "required": [
+                "itemName",
+                "itemUrl",
+              ],
             },
-            "required": [
-              "itemName",
-            ],
+            "title": "Menu",
           },
           "imageProps": {
             "title": "Image Props",
@@ -171,7 +170,6 @@ const manifest: DecoManifest = {
           },
         },
         "required": [
-          "menu",
           "imageProps",
         ],
       },

@@ -1,15 +1,15 @@
-name: LHCI-lighthouse-plugin
-on: push
-jobs:
-  lighthouse-plugin:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - run: yarn add --no-lockfile lighthouse-plugin-field-performance
-      - name: Audit URLs with Field Performance Plugin
-        uses: ./
-        with:
-          urls: |
-            https://deco-sites-supermario--dev.deno.dev/
-          configPath: '.github/lighthouse/lighthouserc-plugin.js'
-          temporaryPublicStorage: true
+# name: LHCI-lighthouse-plugin
+# on: push
+# jobs:
+#   lighthouse-plugin:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - run: yarn add --no-lockfile lighthouse-plugin-field-performance
+#       - name: Audit URLs with Field Performance Plugin
+#         uses: ./
+#         with:
+#           urls: |
+#             https://deco-sites-supermario--dev.deno.dev/
+#           configPath: '.github/lighthouse/lighthouserc-plugin.js'
+#           temporaryPublicStorage: true

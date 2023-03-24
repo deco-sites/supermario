@@ -106,30 +106,40 @@ const manifest: DecoManifest = {
         "title": " Header",
         "type": "object",
         "properties": {
-          "menu": {
-            "type": "array",
-            "items": {
-              "title": "menuItem",
-              "type": "object",
-              "properties": {
-                "itemName": {
-                  "type": [
-                    "string",
-                    "null",
-                  ],
-                  "title": "Item Name",
+          "mainMenu": {
+            "title": "Main Menu",
+            "type": "object",
+            "properties": {
+              "navItem": {
+                "type": "array",
+                "items": {
+                  "title": "navItemProps",
+                  "type": "object",
+                  "properties": {
+                    "itemName": {
+                      "type": [
+                        "string",
+                        "null",
+                      ],
+                      "title": "Item Name",
+                      "description": "Nome item do menu",
+                    },
+                    "itemUrl": {
+                      "type": [
+                        "string",
+                        "null",
+                      ],
+                      "title": "Item Url",
+                      "description":
+                        "Url do item do menu - não utilize caracteres especiais",
+                    },
+                  },
+                  "required": [],
                 },
-                "itemUrl": {
-                  "type": [
-                    "string",
-                    "null",
-                  ],
-                  "title": "Item Url",
-                },
+                "title": "Nav Item",
               },
-              "required": [],
             },
-            "title": "Menu",
+            "required": [],
           },
           "imageProps": {
             "title": "Image Props",

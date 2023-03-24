@@ -58,12 +58,11 @@ export default function HeadComponent({
           __html: `
           /* latin-ext */
           @font-face {
-            font-family: 'Albert Sans';
+            font-family: 'acumin-pro-wide';
             font-style: normal;
             font-weight: 400;
             font-display: swap;
-            src: url(https://fonts.gstatic.com/s/albertsans/v1/i7dOIFdwYjGaAMFtZd_QA1ZVYFeQGQyUV3U.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            src: url(${asset("/font/font-bold.wolf")} format('woff2');
           }
           /* latin */
           @font-face {

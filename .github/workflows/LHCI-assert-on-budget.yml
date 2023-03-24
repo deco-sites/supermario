@@ -9,7 +9,7 @@ jobs:
       - name: Run Lighthouse on urls and validate with budgets.json
         uses: ./
         with:
-          urls: 'https://supermario.deco.site/'
+          urls: 'https://deco-sites-supermario--dev.deno.dev/'
           budgetPath: '.github/lighthouse/budget.json'
           uploadArtifacts: true
           temporaryPublicStorage: true

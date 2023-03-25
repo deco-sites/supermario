@@ -29,6 +29,7 @@ jobs:
           lhci autorun 
             --collect.url="$URL" 
             --upload.target="temporary-public-storage"
+          lhci --method="psi"
           lhci assert --config=./.github/lighthouse/lighthouserc.json
           # lhci assert --budgetsFile=./.github/lighthouse/budget.json
             # --preset= --includePassedAssertions

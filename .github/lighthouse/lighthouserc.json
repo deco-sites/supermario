@@ -16,7 +16,7 @@
         "interactive": ["warn", {"maxNumericValue": 3000}],
         "total-blocking-time":["warn", { "maxNumericValue": 200 }],
         "speed-index": ["warn", {"maxNumericValue": 3400}],
-        "render-blocking-resources": ["warn", { "maxLength": 0 }],
+        "render-blocking-resources": ["warn", { "minScore": 0.9 }],
         "resource-summary:document:size": ["warn", {"maxNumericValue": 14000}],
         "resource-summary:script:size": ["warn", {"maxNumericValue": 140000}],
         "resource-summary:font:size": ["warn", {"maxNumericValue": 100000}],

@@ -11,7 +11,7 @@ jobs:
       URL: ${{ github.event.deployment_status.environment_url }}
 
     steps:
-      - run: echo '${{ toJSON(Deploying to dev test server on branch $GITHUB_REF) }}'
+      - run: echo '${{ toJSON($GITHUB_REF) }}'
       
       - uses: actions/checkout@v3
 

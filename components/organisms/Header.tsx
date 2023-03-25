@@ -10,10 +10,12 @@ export default function Header({ imageProps}: Props) {
     <div class="bg-white w-full py-2 px-2 flex flex-col md:(flex-row px-6) gap-4">
       <audio id="phone-ring-audio" src="audio/phone-ring.mp3"></audio>
       <div class="flex justify-around items-center md:(justify-between w-full)">
-        <Image
-          {...imageProps}
-          className=" object-contain w-[60px] h-12 max-w-[160px] md:(w-24 h-14)"
-        />
+        <h1>
+          <Image
+            {...imageProps}
+            className=" object-contain w-[60px] h-12 max-w-[160px] md:(w-24 h-14)"
+          />
+        </h1>
         <div id="contact-wrapper" class="flex gap-2 text-[12px]">
           <div class="w-full bg-[#f81722] py-0.5 border-t-2 pl-1.5 pr-4 md:(py-2 px-3) border-[#f3777d] uppercase">
             <a

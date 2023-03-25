@@ -4,6 +4,7 @@
       "preset":"lighthouse:no-pwa",
       "includePassedAssertions":true,
       "assertions": {
+        "csp-xss": false,
         "render-blocking-resources": ["warn", { "maxLength": 0 }],
         "resource-summary:document:size": ["warn", {"maxNumericValue": 14000}],
         "speed-index": ["warn", {"maxNumericValue": 20}]

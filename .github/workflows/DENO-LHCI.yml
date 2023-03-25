@@ -12,7 +12,8 @@ jobs:
 
     steps:
       - run: echo "Deploying to dev test server on branch $GITHUB_REF"
-      - run: echo '${{ toJSON(job) }}'
+      - id: step1
+        run: echo "test=hello"
 
       - uses: actions/checkout@v3
 

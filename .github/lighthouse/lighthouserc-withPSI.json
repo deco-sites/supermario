@@ -34,7 +34,9 @@
         "chromeFlags": ["--disable-gpu", "--no-sandbox", "--no-zygote"],
         "configPath": "./.github/lighthouse/desktop-config.js",
         "extraHeaders": "{\"Cookie\":\"monster=blue\",\"x-men\":\"wolverine\"}"
-      }
+      },
+      "method": "psi",
+      "psiApiKey":"${GOOGLE_PSI_KEY}"
     }
   }
 }

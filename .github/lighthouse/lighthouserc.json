@@ -4,7 +4,8 @@
       "preset":"lighthouse:no-pwa",
       "includePassedAssertions":true,
       "assertions": {
-        "render-blocking-resources": ["warn", { "maxLength": 0 }]
+        "render-blocking-resources": ["warn", { "maxLength": 0 }],
+        "resource-summary:document:size": ["warn", {"maxNumericValue": 1}]
       }
     },
     "collect": {

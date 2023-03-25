@@ -11,13 +11,14 @@ jobs:
       URL: ${{ github.event.deployment_status.environment_url }}
 
     steps:
+      - run: echo "Deploying to production server on branch $GITHUB_REF"
       - uses: actions/checkout@v3
 
       - name: Install Node.js 16.x
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
-
+    
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli@0.9.x
 
@@ -25,3 +26,4 @@ jobs:
         run: lhci autorun --collect.url="$URL" --collect.url="$URL/" --upload.target="temporary-public-storage"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+     

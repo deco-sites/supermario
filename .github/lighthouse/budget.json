@@ -1,6 +1,40 @@
 [
   {
     "path": "/*",
+    "timings": [
+      {
+        "metric": "interactive",
+        "budget": 3000
+      },
+      {
+        "metric": "first-meaningful-paint",
+        "budget": 1000
+      },
+      {
+        "metric": "first-contentful-paint",
+        "budget": 1000
+      },
+      {
+        "metric": "largest-contentful-paint",
+        "budget": 2500
+      },
+      {
+        "metric" : "max-potential-fid",
+        "budget": 3000
+      },
+      {
+        "metric": "total-blocking-time",
+        "budget": 150
+      },
+      {
+        "metric": "speed-index",
+        "budget": 3400
+      },
+      {
+        "metric": "cumulative-layout-shift",
+        "budget": 100
+      }
+    ],
     "resourceSizes": [
       {
         "resourceType": "document",
@@ -8,7 +42,7 @@
       },
       {
         "resourceType": "script",
-        "budget": 150
+        "budget": 15
       },
       {
         "resourceType": "stylesheet",
@@ -16,8 +50,21 @@
       },
       {
         "resourceType": "total",
-        "budget": 700
+        "budget": 35
       }
-    ]
+    ],
+    "resourceCounts": [
+      {
+        "resourceType": "third-party",
+        "budget": 10
+      },
+      {
+        "resourceType": "font",
+        "budget": 3
+      }
+    ],
+    "options": {
+      "firstPartyHostnames": ["*.deco.site", "*.deno.dev"]
+   }
   }
 ]

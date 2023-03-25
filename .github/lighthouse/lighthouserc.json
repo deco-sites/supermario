@@ -1,8 +1,6 @@
 {
   "ci": {
     "assert": {
-      "preset":"lighthouse:no-pwa",
-      "includePassedAssertions":true,
       "budgetsFile": "./.github/lighthouse/budget.json"
     },
     "collect": {

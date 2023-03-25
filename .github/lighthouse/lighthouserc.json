@@ -1,7 +1,13 @@
 {
   "ci": {
     "assert": {
-      "budgetsFile": "./.github/lighthouse/budget.json"
+      "preset":"lighthouse:no-pwa",
+      "includePassedAssertions":true,
+      "assertions": {
+        "render-blocking-resources": ["warn", { "maxLength": 0 }],
+        "resource-summary:document:size": ["warn", {"maxNumericValue": 14000}],
+        "speed-index": ["warn", {"maxNumericValue": 20}]
+      }
     },
     "collect": {
       "settings": {

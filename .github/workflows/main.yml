@@ -21,7 +21,8 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v9
         with:
-          urls: "$URL"
+          urls: | 
+            $URL
           budgetPath: .github/lighthouse/budget.json # test performance budgets
           configPath: '.github/lighthouse/lighthouserc-assertions.json'
           uploadArtifacts: true # save results as an action artifacts

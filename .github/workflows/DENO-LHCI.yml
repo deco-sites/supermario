@@ -25,19 +25,12 @@ jobs:
         run: npm install -g @lhci/cli@0.9.x
 
       - name: Run Lighthouse
-        run: lhci autorun --collect.url="$URL" --collect.url="$URL/" --upload.target="temporary-public-storage"
+        run: 
+          lhci autorun 
+            --collect.url="$URL" 
+            --collect.url="$URL/" 
+            --upload.target="temporary-public-storage"
+          lhci assert --budgetsFile=./lighthouse/budget.json
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
   
-  # With details
-  test_with_details:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - uses: ./
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        name: Test With Details
-        conclusion: success
-        action_url: https://example.com/action
-        details_url: https://example.com/details        

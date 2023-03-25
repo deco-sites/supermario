@@ -1,5 +1,5 @@
 name: Lighthouse CI
-on: push
+on: [deployment_status]
 jobs:
 
   lighthouse:
@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-latest]
 
     env:
-      URL: ${{ github.event.deployment_status }}
+      URL: ${{ github.event.deployment_status.environment_url }}
 
     steps:
       - run: echo "$URL"

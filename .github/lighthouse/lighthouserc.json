@@ -31,7 +31,9 @@
     "collect": {
       "settings": {
         "formFactor":"mobile",
-        "screenEmulation": "mobile",
+        "screenEmulation":{
+          "mobile":true
+        },
         "chromeFlags": ["--disable-gpu", "--no-sandbox", "--no-zygote"],
         "configPath": "./.github/lighthouse/desktop-config.js",
         "extraHeaders": "{\"Cookie\":\"monster=blue\",\"x-men\":\"wolverine\"}"

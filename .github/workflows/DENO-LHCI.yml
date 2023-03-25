@@ -11,9 +11,13 @@ jobs:
       URL: ${{ github.event.deployment_status.environment_url }}
 
     steps:
-      - run: echo "Deploying to dev test server on branch $GITHUB_REF"
+    
+      - run: echo "Deployed to dev test server on branch $GITHUB_REF"
 
       - uses: actions/checkout@v3
+        with:
+          action_url: https://example.com/action
+          details_url: https://example.com/details
 
       - name: Install Node.js 16.x
         uses: actions/setup-node@v1
@@ -27,5 +31,3 @@ jobs:
         run: lhci autorun --collect.url="$URL" --collect.url="$URL/" --upload.target="temporary-public-storage"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-      - id: step1
-        run: echo "::error::test=hello"

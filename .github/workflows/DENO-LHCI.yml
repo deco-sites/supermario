@@ -11,7 +11,8 @@ jobs:
       URL: ${{ github.event.deployment_status.environment_url }}
 
     steps:
-      - run: echo "Deploying to production server on branch $GITHUB_REF"
+      - run: echo  echo '${{ toJSON(Deploying to dev test server on branch $GITHUB_REF) }}'
+      
       - uses: actions/checkout@v3
 
       - name: Install Node.js 16.x

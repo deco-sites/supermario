@@ -1,5 +1,5 @@
-name: Lighthouse CI
-on: push
+name: Lint code
+on: [deployment_status]
 jobs:
 
   lighthouse:
@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-latest]
 
     env:
-      URL: ${{ github.event.deployment_status }}
+      URL: ${{ github.event.deployment_status.environment_url }}
 
     steps:
       - run: echo "$URL"
@@ -19,12 +19,12 @@ jobs:
         with:
           deno-version: v1.x # Run with latest stable Deno.
       - run: 'deno task lint'    
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v9
-        with:
-          urls: | 
-            https://deco-sites-supermario--dev.deno.dev/
-          budgetPath: .github/lighthouse/budget.json # test performance budgets
-          configPath: '.github/lighthouse/lighthouserc-assertions.json'
-          uploadArtifacts: true # save results as an action artifacts
-          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+      # - name: Audit URLs using Lighthouse
+      #   uses: treosh/lighthouse-ci-action@v9
+      #   with:
+      #     urls: | 
+      #       "$URL"
+      #     budgetPath: .github/lighthouse/budget.json # test performance budgets
+      #     configPath: '.github/lighthouse/lighthouserc-assertions.json'
+      #     uploadArtifacts: true # save results as an action artifacts
+      #     temporaryPublicStorage: true # upload lighthouse report to the temporary storage

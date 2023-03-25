@@ -23,7 +23,7 @@ jobs:
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: | 
-            https://deco-sites-supermario--dev.deno.dev/
+            "$URL"
           budgetPath: .github/lighthouse/budget.json # test performance budgets
           configPath: '.github/lighthouse/lighthouserc-assertions.json'
           uploadArtifacts: true # save results as an action artifacts

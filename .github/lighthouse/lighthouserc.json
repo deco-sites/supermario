@@ -35,7 +35,6 @@
         "extraHeaders": "{\"Cookie\":\"monster=blue\",\"x-men\":\"wolverine\"}"
       },
       "method": "psi",
-      "psiApiKey":"https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
       "psiStrategy":"desktop"
 
     }

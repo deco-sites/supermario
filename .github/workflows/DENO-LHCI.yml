@@ -1,8 +1,4 @@
 name: live
-description: test the website performance with lighthouse
-branding:
-  icon: 'zap'
-  color: 'green'
 on: [deployment_status]
 
 jobs:

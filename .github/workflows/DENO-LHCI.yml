@@ -15,14 +15,6 @@ jobs:
       - run: echo "Deployed to dev test server on branch $GITHUB_REF"
 
       - uses: actions/checkout@v3
-      
-      - uses: ./
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Test With Details
-          conclusion: success
-          action_url: https://example.com/action
-          details_url: https://example.com/details
 
       - name: Install Node.js 16.x
         uses: actions/setup-node@v1
@@ -36,3 +28,16 @@ jobs:
         run: lhci autorun --collect.url="$URL" --collect.url="$URL/" --upload.target="temporary-public-storage"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+  
+  # With details
+  test_with_details:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ./
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        name: Test With Details
+        conclusion: success
+        action_url: https://example.com/action
+        details_url: https://example.com/details        

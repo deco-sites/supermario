@@ -5,9 +5,10 @@
       "includePassedAssertions":true,
       "assertions": {
         "csp-xss": false,
+        "is-crawlable": ["warn", { "minScore": 0.9 }],
         "render-blocking-resources": ["warn", { "maxLength": 0 }],
         "resource-summary:document:size": ["warn", {"maxNumericValue": 14000}],
-        "speed-index": ["warn", {"maxNumericValue": 20}]
+        "speed-index": ["warn", {"maxNumericValue": 3400}]
       }
     },
     "collect": {

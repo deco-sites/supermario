@@ -12,9 +12,10 @@ import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
 import * as $$$2 from "./sections/Header.tsx";
-import * as $$$3 from "./sections/Informacoes.tsx";
-import * as $$$4 from "./sections/Markdown.tsx";
-import * as $$$5 from "./sections/QuillText.tsx";
+import * as $$$3 from "./sections/HeroBanner.tsx";
+import * as $$$4 from "./sections/Informacoes.tsx";
+import * as $$$5 from "./sections/Markdown.tsx";
+import * as $$$6 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -29,9 +30,10 @@ const manifest: DecoManifest = {
     "./sections/GetStarted.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
     "./sections/Header.tsx": $$$2,
-    "./sections/Informacoes.tsx": $$$3,
-    "./sections/Markdown.tsx": $$$4,
-    "./sections/QuillText.tsx": $$$5,
+    "./sections/HeroBanner.tsx": $$$3,
+    "./sections/Informacoes.tsx": $$$4,
+    "./sections/Markdown.tsx": $$$5,
+    "./sections/QuillText.tsx": $$$6,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -104,6 +106,58 @@ const manifest: DecoManifest = {
     "./sections/Header.tsx": {
       "inputSchema": {
         "title": " Header",
+        "type": "object",
+        "properties": {
+          "imageProps": {
+            "title": "Image Props",
+            "type": "object",
+            "properties": {
+              "altText": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Alt Text",
+              },
+              "title": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Title",
+              },
+              "src": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Src",
+              },
+              "className": {
+                "type": "string",
+                "title": "Class Name",
+              },
+              "preCarregarImagem": {
+                "type": [
+                  "boolean",
+                  "null",
+                ],
+                "title": "Pre Carregar Imagem",
+              },
+            },
+            "required": [
+              "src",
+              "className",
+            ],
+          },
+        },
+        "required": [
+          "imageProps",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/HeroBanner.tsx": {
+      "inputSchema": {
+        "title": " Hero Banner",
         "type": "object",
         "properties": {
           "mainMenu": {

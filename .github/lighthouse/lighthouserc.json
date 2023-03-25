@@ -4,10 +4,15 @@
       "preset":"lighthouse:no-pwa",
       "includePassedAssertions":true,
       "assertions": {
-        "csp-xss": false,
+        "categories:performance": ["error", {"minScore": 0.9}],
+        "categories:accessibility": ["warn", {"minScore": 0.9}],
+        "categories:best-practices": ["warn", {"minScore": 0.9}],
+        "categories:seo": ["warn", {"minScore": 0.9}],
+        "csp-xss": ["warn", { "minScore": 0 }],
         "is-crawlable": ["warn", { "minScore": 0.9 }],
         "render-blocking-resources": ["warn", { "maxLength": 0 }],
         "resource-summary:document:size": ["warn", {"maxNumericValue": 14000}],
+        "cumulative-layout-shift":["error", { "maxScore": 0.100 }],
         "speed-index": ["warn", {"maxNumericValue": 3400}]
       }
     },
@@ -15,7 +20,8 @@
       "settings": {
         "chromeFlags": ["--disable-gpu", "--no-sandbox", "--no-zygote"],
         "configPath": "./.github/lighthouse/desktop-config.js",
-        "extraHeaders": "{\"Cookie\":\"monster=blue\",\"x-men\":\"wolverine\"}"
+        "extraHeaders": "{\"Cookie\":\"monster=blue\",\"x-men\":\"wolverine\"}",
+        "preset": "desktop"
       }
     }
   }

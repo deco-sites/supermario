@@ -3,7 +3,6 @@
     "assert": {
       "preset":"lighthouse:no-pwa",
       "includePassedAssertions":true,
-      "budgetsFile":"./.github/lighthouse/budget.json",
       "assertions": {
         "render-blocking-resources": ["warn", { "maxLength": 0 }]
       }

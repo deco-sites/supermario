@@ -29,9 +29,9 @@ jobs:
           lhci autorun 
             --collect.url="$URL" 
             --upload.target="temporary-public-storage"
-            --method="psi"
-            --psiApiKey="https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
-            --psiStrategy="desktop"
+            Options:--method="psi"
+            Options:--psiApiKey="https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
+            Options:--psiStrategy="desktop"
           lhci assert --config=./.github/lighthouse/lighthouserc.json
           # lhci assert --budgetsFile=./.github/lighthouse/budget.json
             # --preset= --includePassedAssertions

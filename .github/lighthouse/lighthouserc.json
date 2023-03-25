@@ -2,6 +2,7 @@
   "ci": {
     "assert": {
       "preset": "lighthouse:recommended",
+      "includePassedAssertions":true,
       "assertions": {
         "render-blocking-resources": ["warn", { "maxLength": 0 }]
       }

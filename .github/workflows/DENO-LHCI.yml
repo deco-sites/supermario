@@ -30,7 +30,7 @@ jobs:
             --collect.url="$URL" 
             --upload.target="temporary-public-storage"
           lhci assert --config=./.github/lighthouse/lighthouserc.json
-           # lhci --preset=desktop 
+          # lhci --preset=desktop 
           # lhci assert --budgetsFile=./.github/lighthouse/budget.json
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

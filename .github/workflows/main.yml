@@ -8,9 +8,9 @@ jobs:
       matrix:
         # os: [ ubuntu-latest, macos-12, windows-2022 ]
         os: [ubuntu-latest]
-    if: github.event.deployment_status.state == 'success' && github.event.deployment_status.creator.login == 'deno-deploy[bot]'
+
     env:
-      URL: ${{ github.event.deployment_status.environment_url }}
+      URL: ${{ github.event.deployment_status }}
 
     steps:
       - run: echo "$URL"

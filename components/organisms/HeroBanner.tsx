@@ -8,13 +8,20 @@ export type Props = {
   imageProps: ImageProps;
 };
 
-export default function Header({ imageProps, mainMenu }: Props) {
+export default function HeroBanner({ imageProps, mainMenu }: Props) {
   return (
-    <div class="bg-[#f3cc41]">
+    <div class="w-full pt-12 p-4 flex flex-col justify-center items-center bg-[#f3cc41]">
       <Image
         {...imageProps}
-        className=" object-contain w-[228] h-32 max-w-[300px] md:(w-24 h-14)"
+        className=" object-contain w-[228px] h-32 max-w-[300px] md:(w-24 h-14)"
       />
+      <h2 class="text-3xl font-black uppercase font-['rocgrotesc'] font-black">
+        Empresa 100% familiar
+      </h2>
+      <h3 class="text-2xl">
+        Consertar canos é a nossa diversão!
+      </h3>
+      <NavMain/>
     </div>
   );
 }

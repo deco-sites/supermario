@@ -16,7 +16,7 @@ export default {
         transparent: "transparent",
       },
       fontFamily: {
-        sans: ["acumin-pro-wide", "sans-serif"],
+        sans: ["acumin-pro-wide","rocgrotesc", "sans-serif"],
         serif: ["serif"],
       },
     },

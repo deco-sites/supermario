@@ -31,8 +31,8 @@ jobs:
             --collect.url="$URL/" 
             --upload.target="temporary-public-storage"
           lhci assert 
-            --budgetsFile=./lighthouse/budget.json
-            --config=./lighthouse/lighthouserc.json
+            --budgetsFile=./.github/lighthouse/budget.json
+            --config=./.github/lighthouse/lighthouserc.json
             # --preset=lighthouse:recommended --includePassedAssertions
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

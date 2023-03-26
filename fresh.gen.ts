@@ -8,7 +8,8 @@ import * as $0 from "./routes/[...catchall].tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
-import * as $$0 from "./islands/LiveControls.tsx";
+import * as $$0 from "./islands/HeroBanner.tsx";
+import * as $$1 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
 import * as $$$2 from "./sections/Header.tsx";
@@ -25,7 +26,10 @@ const manifest: DecoManifest = {
     "./routes/_middleware.ts": $2,
     "./routes/index.tsx": $3,
   },
-  islands: { "./islands/LiveControls.tsx": $$0 },
+  islands: {
+    "./islands/HeroBanner.tsx": $$0,
+    "./islands/LiveControls.tsx": $$1,
+  },
   sections: {
     "./sections/GetStarted.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
@@ -235,9 +239,47 @@ const manifest: DecoManifest = {
               "className",
             ],
           },
+          "videoProps": {
+            "title": "Video Props",
+            "type": "object",
+            "properties": {
+              "poster": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Poster",
+                "description": "imagem poster do vídeo",
+              },
+              "altText": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Alt Text",
+                "description": "SEO texto alternative",
+              },
+              "seoTitle": {
+                "type": "string",
+                "title": "Seo Title",
+                "description": "SEO texto title",
+              },
+              "videoUrl": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Video Url",
+                "description": "url do vídeo no yutube",
+              },
+            },
+            "required": [
+              "poster",
+              "seoTitle",
+            ],
+          },
         },
         "required": [
           "imageProps",
+          "videoProps",
         ],
       },
       "outputSchema": null,

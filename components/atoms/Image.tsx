@@ -10,7 +10,7 @@ export interface ImageProps {
 }
 
 export default function Image(
-  { altText, title, src, className, preCarregarImagem }: ImageProps,
+  { altText, title, src, className, preCarregarImagem}: ImageProps,
 ) {
   return (
     <>

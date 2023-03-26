@@ -21,6 +21,10 @@ export default function HeroBanner({ imageProps, mainMenu }: Props) {
       <h3 class="text-2xl">
         Consertar canos é a nossa diversão!
       </h3>
+      <div class="w-[400px]">
+        <iframe class="object-contain w-full" width="560" height="315" src="https://www.youtube.com/embed/L7Jt4BdAOE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      
       <NavMain/>
     </div>
   );

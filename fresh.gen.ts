@@ -239,8 +239,8 @@ const manifest: DecoManifest = {
               "className",
             ],
           },
-          "videoProps": {
-            "title": "Video Props",
+          "videoConfiguracoes": {
+            "title": "Video Configuracoes",
             "type": "object",
             "properties": {
               "poster": {
@@ -262,13 +262,14 @@ const manifest: DecoManifest = {
                 "title": "Seo Title",
                 "description": "SEO texto title",
               },
-              "videoUrl": {
+              "videoUrlCode": {
                 "type": [
                   "string",
                   "null",
                 ],
-                "title": "Video Url",
-                "description": "url do vídeo no yutube",
+                "title": "Video Url Code",
+                "description":
+                  "O código do vídeo no yutube, visivel no final da url",
               },
             },
             "required": [
@@ -279,7 +280,7 @@ const manifest: DecoManifest = {
         },
         "required": [
           "imageProps",
-          "videoProps",
+          "videoConfiguracoes",
         ],
       },
       "outputSchema": null,

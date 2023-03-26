@@ -80,6 +80,7 @@ export default function HeroBanner(
             src={videoConfiguracoes?.poster}
             altText={videoConfiguracoes?.altText}
             title={videoConfiguracoes?.seoTitle}
+            preCarregarImagem={true}
             className="
             p-0
             object-contain 

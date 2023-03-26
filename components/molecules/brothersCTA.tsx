@@ -9,6 +9,7 @@ export default function BrothersCTA(){
             preload="false"
             height={100}
             width={100}
+            alt="personagem mario encanador"
           />
           <img
             class="w-[40%] h-auto"
@@ -17,6 +18,7 @@ export default function BrothersCTA(){
             preload="false"
             height={100}
             width={100}
+            alt="personagem luigi encanador"
           />
         </div>
 
@@ -28,6 +30,7 @@ export default function BrothersCTA(){
             preload="false"
             height={100}
             width={100}
+            alt="tv encanador"
           />
           <a href="https://www.youtube.com/watch?v=iL6-Q62CjbA" class="relative group" target="_blank">
             <img
@@ -37,6 +40,7 @@ export default function BrothersCTA(){
               preload="false"
               height={100}
               width={100}
+              alt="tampa de esgoto"
             />
             <div class="w-[80%] h-8 relative top-2 -left-4 z-[1] bg-black rounded-1/2 border-t-2 border-4 border-[#c8a82f] md:(h-10 top-1 border-t-2 border-[6px])" />
           </a>

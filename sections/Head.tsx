@@ -106,6 +106,15 @@ export default function HeadComponent({
           a:hover{
             cursor: url(/icons/cursor.png),auto !important;
           }
+
+          body::-webkit-scrollbar {
+           display:none /* for Chrome, Safari, and Opera */
+          }
+          body{
+            -ms-overflow-style: none; /* for Internet Explorer, Edge */
+            scrollbar-width: none; /* for Firefox */
+            overflow-y: scroll; 
+          }
       `,
         }}
       >

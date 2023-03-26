@@ -19,6 +19,12 @@ export default {
         sans: ["acumin-pro-wide","rocgrotesc", "sans-serif"],
         serif: ["serif"],
       },
+      outline: {
+        red: [
+          "0.2rem solid #cd0b14",
+          "0px",
+        ],
+      },
     },
   },
 };

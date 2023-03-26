@@ -11,11 +11,11 @@ export interface navItemProps {
 
 export default function NavItem({ itemName, itemUrl = "/"}: navItemProps) {
   return (
-    <li>
+    <li class="flex md:w-full">
       <a
         href={itemUrl?.toString().replaceAll(",", "")
           .replaceAll(" ", "")}
-        class={"text-gray-500 hover:text-gray-700 py-1 border-gray-500"}
+        class={"min-w-[300px] text-white text-center py-1 w-full bg-[#f81722] py-0.5 border-t-2 border-lr-2 pl-1.5 pr-4  border-[#f3777d] rounded-[9px] outline-red uppercase md:(w-full py-2 px-3 rounded-none)"}
       >
         {itemName}
       </a>

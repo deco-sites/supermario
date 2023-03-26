@@ -33,19 +33,17 @@ export interface videoProps{
 
 export default function HeroBanner({ imageProps, videoProps, mainMenu }: Props) {
 
-    const [opacity, setOpacity] = useState(1);
+    const [visible, setVisible] = useState(false);
 
     
 
     function loadIframe(){
 
-        console.log(opacity)
+        console.log(visible)
 
         return(
-            <iframe 
-                style={{opacity:opacity}} 
+            <iframe  
                 class="object-contain w-full absolute top-0 left-0 z-10"
-                onClick={()=> setOpacity(1)}
                 width="560" height="315" 
                 src={videoProps.videoUrl+"?autoplay=1 "}title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen poster=""> 
             </iframe>
@@ -65,7 +63,7 @@ export default function HeroBanner({ imageProps, videoProps, mainMenu }: Props) 
       <h3 class="text-2xl">
         Consertar canos é a nossa diversão!
       </h3>
-      <div class="w-full relative" >
+      <div class="w-full relative" onClick={()=> setVisible(true)}>
         <ImageHero
           {...imageProps}
           src={videoProps?.poster}
@@ -73,7 +71,7 @@ export default function HeroBanner({ imageProps, videoProps, mainMenu }: Props) 
           title={videoProps?.seoTitle}
           className="absolute top-0 left-0 p-0 object-contain w-full h-[300] max-w-[600px] md:(w-24 h-14)"
         />
-        {videoProps?.videoUrl ? loadIframe() : null}
+        {videoProps?.videoUrl && visible ? loadIframe() : null}
       </div>
       
       <NavMain/>

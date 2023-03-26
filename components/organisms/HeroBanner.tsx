@@ -1,23 +1,61 @@
-import Image from "$start/components/atoms/Image.tsx";
+import ImageHero from "$start/components/atoms/Image.tsx";
 import { type ImageProps } from "$start/components/atoms/Image.tsx";
+import type { Image } from "$live/std/ui/types/Image.ts";
 import NavMain from "$start/components/molecules/NavMain.tsx";
 import { navMainProps } from "$start/components/molecules/NavMain.tsx";
+import { useState,useEffect } from 'preact/hooks';
 
 export type Props = {
   mainMenu?: navMainProps;
   imageProps: ImageProps;
+  videoProps: videoProps;
 };
 
-function loadIframe(){
-    return(
-        <iframe class="object-contain w-full" width="560" height="315" src="https://www.youtube.com/embed/L7Jt4BdAOE0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
-    )
+export interface videoProps{
+    /**
+   * @description imagem poster do vídeo
+   */
+    poster: Image;
+    /**
+   * @description SEO texto alternative
+   */
+    altText?: string;
+     /**
+   * @description SEO texto title
+   */
+    seoTitle: string;
+     /**
+   * @description url do vídeo no yutube
+   */
+    videoUrl?: string;
 }
 
-export default function HeroBanner({ imageProps, mainMenu }: Props) {
+
+export default function HeroBanner({ imageProps, videoProps, mainMenu }: Props) {
+
+    const [opacity, setOpacity] = useState(1);
+
+    
+
+    function loadIframe(){
+
+        console.log(opacity)
+
+        return(
+            <iframe 
+                style={{opacity:opacity}} 
+                class="object-contain w-full absolute top-0 left-0 z-10"
+                onClick={()=> setOpacity(1)}
+                width="560" height="315" 
+                src={videoProps.videoUrl+"?autoplay=1 "}title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen poster=""> 
+            </iframe>
+            
+        )
+    }
+
   return (
-    <div class="w-full pt-12 p-4 flex flex-col justify-center items-center bg-[#f3cc41]">
-      <Image
+    <div class="w-full pt-12 flex flex-col justify-center items-center bg-[#f3cc41]">
+      <ImageHero
         {...imageProps}
         className=" object-contain w-[228px] h-32 max-w-[300px] md:(w-24 h-14)"
       />
@@ -27,8 +65,15 @@ export default function HeroBanner({ imageProps, mainMenu }: Props) {
       <h3 class="text-2xl">
         Consertar canos é a nossa diversão!
       </h3>
-      <div class="w-[400px]">
-        {loadIframe()}
+      <div class="w-full relative" >
+        <ImageHero
+          {...imageProps}
+          src={videoProps?.poster}
+          altText={videoProps?.altText}
+          title={videoProps?.seoTitle}
+          className="absolute top-0 left-0 p-0 object-contain w-full h-[300] max-w-[600px] md:(w-24 h-14)"
+        />
+        {videoProps?.videoUrl ? loadIframe() : null}
       </div>
       
       <NavMain/>

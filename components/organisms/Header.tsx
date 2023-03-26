@@ -40,6 +40,7 @@ export default function Header({ imageProps}: Props) {
               src="icons/contact.webp"
               width="100"
               height="100"
+              alt="contatar os imãos encanadores"
             />
             <p class="flex flex-col font-bold md:(text-[19px])">
               Visite-nos em 

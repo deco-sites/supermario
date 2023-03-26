@@ -4,6 +4,7 @@ import type { Image } from "$live/std/ui/types/Image.ts";
 import NavMain from "$start/components/molecules/NavMain.tsx";
 import { navMainProps } from "$start/components/molecules/NavMain.tsx";
 import { useEffect, useState } from "preact/hooks";
+import BrothersCTA from "$start/components/molecules/brothersCTA.tsx";
 
 export type Props = {
   mainMenu?: navMainProps;
@@ -53,40 +54,48 @@ export default function HeroBanner(
 
   return (
     <div class="md:flex flex-col-reverse bg-[#f3cc41] py-12 md:(pt-1)">
-   
-    <div class="w-full h-auto flex flex-col justify-start items-center 
+      <div class="w-full h-auto flex flex-col justify-start items-center 
       md:(flex-row justify-around)">
-      <div class="flex flex-col items-center text-center">
-        <ImageHero
-          {...imageProps}
-          className=" object-contain w-[228px] h-32 max-w-[300px] md:(w-[60%] h-36)"
-        />
-        <h2 class="text-3xl font-black uppercase font-['rocgrotesc'] font-black">
-          Empresa 100% familiar
-        </h2>
-        <h3 class="text-2xl">
-          Consertar canos é a nossa diversão!
-        </h3>
-      </div>
-      <div class="w-auto h-auto relative py-8 md:py-16" onClick={() => setVisible(true)}>
-        <ImageHero
-          {...imageProps}
-          src={videoConfiguracoes?.poster}
-          altText={videoConfiguracoes?.altText}
-          title={videoConfiguracoes?.seoTitle}
-          className="
+        <div class="flex flex-col items-center text-center">
+          <ImageHero
+            {...imageProps}
+            className=" object-contain w-[228px] h-32 max-w-[300px] md:(w-1/2 h-36)"
+          />
+          <h2 class="text-3xl font-black uppercase font-['rocgrotesc'] font-black">
+            Empresa 100% familiar
+          </h2>
+          <h3 class="text-2xl">
+            Consertar canos é a nossa diversão!
+          </h3>
+          <div class="hidden md:block">
+            <BrothersCTA />
+          </div>
+        </div>
+        <div
+          class="w-auto h-auto relative py-8 md:py-16"
+          onClick={() => setVisible(true)}
+        >
+          <ImageHero
+            {...imageProps}
+            src={videoConfiguracoes?.poster}
+            altText={videoConfiguracoes?.altText}
+            title={videoConfiguracoes?.seoTitle}
+            className="
             p-0
             object-contain 
             w-full max-w-[800px]
-            h-[300] 
+            h-[300px] 
             md:(h-[76vh])"
-        />
-        {videoConfiguracoes?.videoUrlCode && visible ? loadIframe() : null}
+          />
+          {videoConfiguracoes?.videoUrlCode && visible ? loadIframe() : null}
+        </div>
       </div>
-    </div>
-    <NavMain
+      <NavMain
         {...mainMenu}
       />
+      <div class="md:hidden">
+        <BrothersCTA />
+      </div>
     </div>
   );
 }

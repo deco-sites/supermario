@@ -8,6 +8,12 @@ export type Props = {
   imageProps: ImageProps;
 };
 
+function loadIframe(){
+    return(
+        <iframe class="object-contain w-full" width="560" height="315" src="https://www.youtube.com/embed/L7Jt4BdAOE0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+    )
+}
+
 export default function HeroBanner({ imageProps, mainMenu }: Props) {
   return (
     <div class="w-full pt-12 p-4 flex flex-col justify-center items-center bg-[#f3cc41]">
@@ -22,7 +28,7 @@ export default function HeroBanner({ imageProps, mainMenu }: Props) {
         Consertar canos é a nossa diversão!
       </h3>
       <div class="w-[400px]">
-        <iframe class="object-contain w-full" width="560" height="315" src="https://www.youtube.com/embed/L7Jt4BdAOE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        {loadIframe()}
       </div>
       
       <NavMain/>

@@ -52,43 +52,101 @@ export default function HeroBanner(
     );
   }
 
+  function sliderMsg(){
+    console.log("call")
+    const [msg, setMsg] = useState("");
+    const [msgIndex, setMsgIndex] = useState(0);
+    const listMsg = [
+      "Agora atendendo no Brooklyn e Queens!",
+      "Trabalho confiável e de qualidade!",
+      "Satisfação garantida!",
+      "Conhecidos na vizinhança!",
+    ]
+    
+    setTimeout(()=>{
+      if(msgIndex > listMsg.length){
+        setMsg(listMsg[0]);
+        setMsgIndex(0);
+      }else{
+        setMsg(listMsg[msgIndex]);
+        setMsgIndex(msgIndex+1);
+      }
+      
+      
+    },4000);
+    return(
+      <p id="slide" class="w-auto absolute left-[12rem]">{msg}</p>
+    )
+  }
+
   return (
-    <div class="md:flex flex-col-reverse bg-[#f3cc41] py-12 md:(pt-1)">
-      <div class="w-full h-auto flex flex-col justify-start items-center 
-      md:(flex-row justify-around)">
-        <div class="flex flex-col items-center text-center">
-          <ImageHero
-            {...imageProps}
-            className=" object-contain w-[228px] h-32 max-w-[300px] md:(w-1/2 h-36)"
-          />
-          <h2 class="text-3xl font-black uppercase font-['rocgrotesc'] font-black">
-            Empresa 100% familiar
-          </h2>
-          <h3 class="text-2xl">
-            Consertar canos é a nossa diversão!
-          </h3>
-          <div class="hidden md:block">
-            <BrothersCTA />
+    <div class="md:flex flex-col-reverse bg-[#f3cc41] pt-28 md:(pt-[4.7rem])">
+      <div class="flex flex-col">
+        <div class="w-full h-auto flex flex-col justify-start items-center 
+      md:(flex-row justify-around pt-8)">
+          <div class="flex flex-col items-center text-center">
+            <ImageHero
+              {...imageProps}
+              className=" object-contain w-[228px] h-32 max-w-[300px] md:(w-1/2 h-36)"
+            />
+            <h2 class="text-3xl font-black uppercase font-['rocgrotesc'] font-black">
+              Empresa 100% familiar
+            </h2>
+            <h3 class="text-2xl">
+              Consertar canos é a nossa diversão!
+            </h3>
+            <div class="hidden md:block">
+              <BrothersCTA />
+            </div>
           </div>
-        </div>
-        <div
-          class="w-auto h-auto relative py-8 md:py-16"
-          onClick={() => setVisible(true)}
-        >
-          <ImageHero
-            {...imageProps}
-            src={videoConfiguracoes?.poster}
-            altText={videoConfiguracoes?.altText}
-            title={videoConfiguracoes?.seoTitle}
-            preCarregarImagem={true}
-            className="
+
+          <div
+            class="w-auto h-auto relative py-8 md:(pt-16 pb-0)"
+            onClick={() => setVisible(true)}
+          >
+            <ImageHero
+              {...imageProps}
+              src={videoConfiguracoes?.poster}
+              altText={videoConfiguracoes?.altText}
+              title={videoConfiguracoes?.seoTitle}
+              preCarregarImagem={true}
+              className="
             p-0
             object-contain 
             w-full max-w-[800px]
             h-[300px] 
-            md:(h-[76vh])"
+            md:(w-screen h-[73vh])"
+            />
+            {videoConfiguracoes?.videoUrlCode && visible ? loadIframe() : null}
+          </div>
+        </div>
+        <div
+          id="certified-wrapper"
+          class="hidden lg:(w-full flex justify-start items-center relative text-4xl px-[4vw]) "
+        >
+          <img
+            class="w-[100px] h-24 "
+            src="/images/certifiedsuper.webp"
+            loading="lazy"
+            preload="false"
+            height={100}
+            width={100}
+            alt="tampa de esgoto"
           />
-          {videoConfiguracoes?.videoUrlCode && visible ? loadIframe() : null}
+          <style dangerouslySetInnerHTML={{
+              __html: `
+              @keyframes fadeIn{
+                0%{opacity: 0}
+                50%{opacity: 1}
+                100%{opacity: 0}
+              }
+              #slide{
+                animation: fadeIn 4s ease-in-out infinite
+              }
+              `,
+            }}>
+          </style>
+          {sliderMsg()}
         </div>
       </div>
       <NavMain

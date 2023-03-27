@@ -15,7 +15,7 @@ export default function NavItem({ itemName, itemUrl = "/"}: navItemProps) {
       <a
         href={itemUrl?.toString().replaceAll(",", "")
           .replaceAll(" ", "")}
-        class={"min-w-[300px] text-white text-center py-1 w-full bg-[#f81722] py-0.5 border-t-[5px] border-lr-0 pl-1.5 pr-4  border-[#f3777d] rounded-[9px] uppercase md:(w-full py-2 px-3 border-t-2 rounded-none outline-red)"}
+        class="flex justify-center items-center min-w-[300px] min-h-[36px] text-white text-center py-2 w-full bg-[#f81722] border-t-[5px] border-lr-2 pl-1.5 pr-4  border-[#f3777d] rounded-[9px] uppercase md:(w-full pt-[1px] pb-0 px-3 rounded-none  border-lr-0 border-t-[3px] outline-red)"
       >
         {itemName}
       </a>

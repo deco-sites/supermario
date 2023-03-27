@@ -1,30 +1,32 @@
 export default function BrothersCTA(){
     return(
-        <div class="w-screen flex justify-center items-center gap-4 pt-8 px-4 md:(w-[36vw])">
+        <div class="w-screen flex justify-around items-center pt-8 px-4 md:(w-[36vw] justify-center gap-16 )">
         <div id="brotherWrapper" class="flex justify-center items-center">
           <img
-            class="w-[40%] h-auto"
+            class="w-1/2 h-64 md:(w-[60%] h-[20vw])"
             src="/images/mario.webp"
             loading="lazy"
             preload="false"
-            height={100}
-            width={100}
+            height="300"
+            width="500"
             alt="personagem mario encanador"
+            title="Mario"
           />
           <img
-            class="w-[40%] h-auto"
+            class="w-1/2 h-64 md:(w-[60%] h-[20vw])"
             src="/images/luigi.webp"
             loading="lazy"
             preload="false"
-            height={100}
-            width={100}
+            height="300"
+            width="500"
             alt="personagem luigi encanador"
+            title="Luigi"
           />
         </div>
 
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8 md:gap-12">
           <img
-            class="w-full h-auto"
+            class="w-full h-28 md:h-[9vw]"
             src="/images/tv.webp"
             loading="lazy"
             preload="false"
@@ -34,7 +36,7 @@ export default function BrothersCTA(){
           />
           <a href="https://www.youtube.com/watch?v=iL6-Q62CjbA" class="relative group" target="_blank">
             <img
-              class="w-full h-auto absolute z-[2] duration-1000 transition-transform group-hover:(duration-1000 ease-in-out transition-transform translate-x-1/3 )"
+              class="w-full h-11 absolute z-[2] duration-1000 transition-transform group-hover:(duration-1000 ease-in-out transition-transform translate-x-1/3 ) "
               src="/images/NovoProjeto.webp"
               loading="lazy"
               preload="false"

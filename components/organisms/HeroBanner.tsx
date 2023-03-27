@@ -53,7 +53,7 @@ export default function HeroBanner(
   }
 
   return (
-    <div class="md:flex flex-col-reverse bg-[#f3cc41] py-12 md:(pt-1)">
+    <div class="md:flex flex-col-reverse bg-[#f3cc41] pt-28 md:(pt-[4.7rem])">
       <div class="w-full h-auto flex flex-col justify-start items-center 
       md:(flex-row justify-around)">
         <div class="flex flex-col items-center text-center">
@@ -86,7 +86,7 @@ export default function HeroBanner(
             object-contain 
             w-full max-w-[800px]
             h-[300px] 
-            md:(h-[76vh])"
+            md:(w-screen h-[76vh])"
           />
           {videoConfiguracoes?.videoUrlCode && visible ? loadIframe() : null}
         </div>

@@ -10,13 +10,14 @@ import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/HeroBanner.tsx";
 import * as $$1 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/GetStarted.tsx";
-import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Header.tsx";
-import * as $$$3 from "./sections/HeroBanner.tsx";
-import * as $$$4 from "./sections/Informacoes.tsx";
-import * as $$$5 from "./sections/Markdown.tsx";
-import * as $$$6 from "./sections/QuillText.tsx";
+import * as $$$0 from "./sections/About.tsx";
+import * as $$$1 from "./sections/GetStarted.tsx";
+import * as $$$2 from "./sections/Head.tsx";
+import * as $$$3 from "./sections/Header.tsx";
+import * as $$$4 from "./sections/HeroBanner.tsx";
+import * as $$$5 from "./sections/Informacoes.tsx";
+import * as $$$6 from "./sections/Markdown.tsx";
+import * as $$$7 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -31,16 +32,57 @@ const manifest: DecoManifest = {
     "./islands/LiveControls.tsx": $$1,
   },
   sections: {
-    "./sections/GetStarted.tsx": $$$0,
-    "./sections/Head.tsx": $$$1,
-    "./sections/Header.tsx": $$$2,
-    "./sections/HeroBanner.tsx": $$$3,
-    "./sections/Informacoes.tsx": $$$4,
-    "./sections/Markdown.tsx": $$$5,
-    "./sections/QuillText.tsx": $$$6,
+    "./sections/About.tsx": $$$0,
+    "./sections/GetStarted.tsx": $$$1,
+    "./sections/Head.tsx": $$$2,
+    "./sections/Header.tsx": $$$3,
+    "./sections/HeroBanner.tsx": $$$4,
+    "./sections/Informacoes.tsx": $$$5,
+    "./sections/Markdown.tsx": $$$6,
+    "./sections/QuillText.tsx": $$$7,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
+    "./sections/About.tsx": {
+      "inputSchema": {
+        "title": " About",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Title",
+            "description": " titulo principal",
+          },
+          "paragraphs": {
+            "type": "array",
+            "items": {
+              "title": "paragraphProps",
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": [
+                    "string",
+                    "null",
+                  ],
+                  "title": "Description",
+                  "description": " texto descritivo",
+                },
+              },
+              "required": [],
+            },
+            "title": "Paragraphs",
+            "description": " adicione um novo parágrafo",
+          },
+        },
+        "required": [
+          "paragraphs",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/GetStarted.tsx": {
       "inputSchema": {
         "title": " Get Started",

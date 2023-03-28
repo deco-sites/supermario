@@ -80,7 +80,7 @@ export default function HeroBanner(
   }
 
   return (
-    <div class="md:flex flex-col-reverse bg-[#f3cc41] pt-28 md:(pt-[4.7rem])">
+    <div class="md:flex flex-col-reverse bg-[#f3cc41] pt-28 pb-12 md:(pt-[4.7rem] pb-8)">
       <div class="flex flex-col">
         <div class="w-full h-auto flex flex-col justify-start items-center 
       md:(flex-row justify-around pt-8)">

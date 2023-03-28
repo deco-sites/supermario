@@ -44,9 +44,9 @@ export default function About({title,paragraphs}:aboutProps){
                     lazyload="eager"
                     fetchpriority="low"
                 />
-                <p class="w-1/2 flex flex-col justify-center items-center absolute animate-pulse-zoom text-4xl font-bold text-white">
+                <p class="w-1/2 flex flex-col justify-center items-center absolute animate-pulse-zoom text-3xl  font-bold text-white lg:text-4xl">
                     24/7
-                    <span class="text-[8px] leading-3 font-normal lg:text-[12px]">
+                    <span class="text-center text-[8px] leading-[0.5rem] font-normal lg:(leading-3 text-[12px])">
                         ATENDEMOS <br/>EMERGÊNCIAS
                     </span>
                 </p>

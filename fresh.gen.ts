@@ -11,13 +11,14 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/HeroBanner.tsx";
 import * as $$1 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/About.tsx";
-import * as $$$1 from "./sections/GetStarted.tsx";
-import * as $$$2 from "./sections/Head.tsx";
-import * as $$$3 from "./sections/Header.tsx";
-import * as $$$4 from "./sections/HeroBanner.tsx";
-import * as $$$5 from "./sections/Informacoes.tsx";
-import * as $$$6 from "./sections/Markdown.tsx";
-import * as $$$7 from "./sections/QuillText.tsx";
+import * as $$$1 from "./sections/Depoiments.tsx";
+import * as $$$2 from "./sections/GetStarted.tsx";
+import * as $$$3 from "./sections/Head.tsx";
+import * as $$$4 from "./sections/Header.tsx";
+import * as $$$5 from "./sections/HeroBanner.tsx";
+import * as $$$6 from "./sections/Informacoes.tsx";
+import * as $$$7 from "./sections/Markdown.tsx";
+import * as $$$8 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -33,13 +34,14 @@ const manifest: DecoManifest = {
   },
   sections: {
     "./sections/About.tsx": $$$0,
-    "./sections/GetStarted.tsx": $$$1,
-    "./sections/Head.tsx": $$$2,
-    "./sections/Header.tsx": $$$3,
-    "./sections/HeroBanner.tsx": $$$4,
-    "./sections/Informacoes.tsx": $$$5,
-    "./sections/Markdown.tsx": $$$6,
-    "./sections/QuillText.tsx": $$$7,
+    "./sections/Depoiments.tsx": $$$1,
+    "./sections/GetStarted.tsx": $$$2,
+    "./sections/Head.tsx": $$$3,
+    "./sections/Header.tsx": $$$4,
+    "./sections/HeroBanner.tsx": $$$5,
+    "./sections/Informacoes.tsx": $$$6,
+    "./sections/Markdown.tsx": $$$7,
+    "./sections/QuillText.tsx": $$$8,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -79,6 +81,59 @@ const manifest: DecoManifest = {
         },
         "required": [
           "paragraphs",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Depoiments.tsx": {
+      "inputSchema": {
+        "title": " Depoiments",
+        "type": "object",
+        "properties": {
+          "review": {
+            "type": "array",
+            "items": {
+              "title": "ReviewCardProps",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "title": "Name",
+                  "description": "defina o nome do avaliador",
+                },
+                "userImage": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "User Image",
+                  "description": "defina a imagem de perfil do avaliador",
+                },
+                "textReview": {
+                  "type": [
+                    "string",
+                    "null",
+                  ],
+                  "title": "Text Review",
+                  "description": "defina o texto do avaliador",
+                },
+                "rating": {
+                  "type": [
+                    "number",
+                    "null",
+                  ],
+                  "title": "Rating",
+                  "description": "defina a quantidade de estrelas recebidas",
+                },
+              },
+              "required": [
+                "name",
+              ],
+            },
+            "title": "Review",
+            "description": "adcione uma avaliação de usuário",
+          },
+        },
+        "required": [
+          "review",
         ],
       },
       "outputSchema": null,

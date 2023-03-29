@@ -1,4 +1,4 @@
-# Deco Start — live template
+# Deco Start — live template - SMENCANADORES.COM.BR
 
 Welcome to your live site!
 

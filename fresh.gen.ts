@@ -10,6 +10,7 @@ import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/HeroBanner.tsx";
 import * as $$1 from "./islands/LiveControls.tsx";
+import * as $$2 from "./islands/SliderJs.tsx";
 import * as $$$0 from "./sections/About.tsx";
 import * as $$$1 from "./sections/Depoiments.tsx";
 import * as $$$2 from "./sections/GetStarted.tsx";
@@ -31,6 +32,7 @@ const manifest: DecoManifest = {
   islands: {
     "./islands/HeroBanner.tsx": $$0,
     "./islands/LiveControls.tsx": $$1,
+    "./islands/SliderJs.tsx": $$2,
   },
   sections: {
     "./sections/About.tsx": $$$0,

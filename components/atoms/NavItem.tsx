@@ -1,12 +1,10 @@
 export interface navItemProps {
-  /**
-   * @description Nome item do menu
-   */
+
+  /** @description Nome item do menu */
   itemName?: string;
-  /**
-   * @description Url do item do menu - não utilize caracteres especiais
-   */
+  /** @description Url do item do menu - não utilize caracteres especiais */
   itemUrl?: string;
+  
 }
 
 export default function NavItem({ itemName, itemUrl = "/"}: navItemProps) {

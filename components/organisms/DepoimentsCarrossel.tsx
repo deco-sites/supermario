@@ -25,8 +25,7 @@ export default function DepoimentsCarrossel(
           src="images/share.webp"
           title="super mario plumbing"
           alt="super mario plumbing"
-          preload="false"
-          lazyload="eager"
+          loading="lazy"
           fetchpriority="low"
         />
         <h2 class="font-bold text-3xl text-[#189c41]">

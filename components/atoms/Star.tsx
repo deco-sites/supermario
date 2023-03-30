@@ -12,8 +12,7 @@ export default function Star({active}:StarProps){
         src="icons/fourstarsOn.webp"
         title="estrela de avaliação"
         alt="estrela de avaliação"
-        preload="false"
-        lazyload="eager"
+        loading="eager"
         fetchpriority="low"
         />
         : <img 

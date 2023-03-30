@@ -23,8 +23,7 @@ export default function ReviewCard(
           src={userImage || "icons/user.webp"}
           title="estrela de avaliação"
           alt="estrela de avaliação"
-          preload="false"
-          lazyload="eager"
+          loading="lazy"
           fetchpriority="low"
         />
         <div class="flex flex-col justify-center items-center gap-3">

@@ -28,6 +28,8 @@ export default function Image(
         alt={altText}
         title={title}
         preload="true"
+        loading="eager"
+        fetchpriority="high"
       />
     </>
   );

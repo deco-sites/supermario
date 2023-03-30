@@ -38,6 +38,9 @@ export default {
       },
       boxShadow:{
         "buttonsShadow": '#ec8b8b 0px 3px 3px 2px inset, #310709 0px -3px 4px 3px inset'
+      },
+      cursor:{
+        'fancy': 'url(/icons/cursor.png), pointer'
       }
     },
   },

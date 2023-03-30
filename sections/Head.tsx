@@ -100,21 +100,24 @@ export default function HeadComponent({
             font-display: swap;
             src: url(${asset("/font/rocgrotesk-bold.otf")} format("opentype");
           }
-          body{
+          *{
             cursor: url(/icons/cursor.png),auto !important;
           }
-          a:hover{
-            cursor: url(/icons/cursor.png),auto !important;
+          *{
+            cursor: url(/icons/cursor.png),default !important;
           }
+          
+          *::-webkit-scrollbar {
+            display:none !important;/* for Chrome, Safari, and Opera */
+           }
 
-          body::-webkit-scrollbar {
-           display:none /* for Chrome, Safari, and Opera */
-          }
-          body{
+          html,body{
             -ms-overflow-style: none; /* for Internet Explorer, Edge */
             scrollbar-width: none; /* for Firefox */
             overflow-y: scroll; 
           }
+
+
       `,
         }}
       >

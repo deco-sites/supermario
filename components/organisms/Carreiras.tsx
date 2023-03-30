@@ -10,7 +10,7 @@ export default function Carreiras() {
           preload="false"
           height={100}
           width={100}
-          alt="tampa de esgoto"
+          alt="se inscreva agora para vaga de emprego na smbencanadores"
         />
       </div>
     </div>

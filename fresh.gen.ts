@@ -12,15 +12,16 @@ import * as $$0 from "./islands/HeroBanner.tsx";
 import * as $$1 from "./islands/LiveControls.tsx";
 import * as $$2 from "./islands/SliderJs.tsx";
 import * as $$$0 from "./sections/About.tsx";
-import * as $$$1 from "./sections/Depoiments.tsx";
-import * as $$$2 from "./sections/GetStarted.tsx";
-import * as $$$3 from "./sections/Head.tsx";
-import * as $$$4 from "./sections/Header.tsx";
-import * as $$$5 from "./sections/HeroBanner.tsx";
-import * as $$$6 from "./sections/Informacoes.tsx";
-import * as $$$7 from "./sections/Markdown.tsx";
-import * as $$$8 from "./sections/Marquee.tsx";
-import * as $$$9 from "./sections/QuillText.tsx";
+import * as $$$1 from "./sections/Carreiras.tsx";
+import * as $$$2 from "./sections/Depoiments.tsx";
+import * as $$$3 from "./sections/GetStarted.tsx";
+import * as $$$4 from "./sections/Head.tsx";
+import * as $$$5 from "./sections/Header.tsx";
+import * as $$$6 from "./sections/HeroBanner.tsx";
+import * as $$$7 from "./sections/Informacoes.tsx";
+import * as $$$8 from "./sections/Markdown.tsx";
+import * as $$$9 from "./sections/Marquee.tsx";
+import * as $$$10 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -37,15 +38,16 @@ const manifest: DecoManifest = {
   },
   sections: {
     "./sections/About.tsx": $$$0,
-    "./sections/Depoiments.tsx": $$$1,
-    "./sections/GetStarted.tsx": $$$2,
-    "./sections/Head.tsx": $$$3,
-    "./sections/Header.tsx": $$$4,
-    "./sections/HeroBanner.tsx": $$$5,
-    "./sections/Informacoes.tsx": $$$6,
-    "./sections/Markdown.tsx": $$$7,
-    "./sections/Marquee.tsx": $$$8,
-    "./sections/QuillText.tsx": $$$9,
+    "./sections/Carreiras.tsx": $$$1,
+    "./sections/Depoiments.tsx": $$$2,
+    "./sections/GetStarted.tsx": $$$3,
+    "./sections/Head.tsx": $$$4,
+    "./sections/Header.tsx": $$$5,
+    "./sections/HeroBanner.tsx": $$$6,
+    "./sections/Informacoes.tsx": $$$7,
+    "./sections/Markdown.tsx": $$$8,
+    "./sections/Marquee.tsx": $$$9,
+    "./sections/QuillText.tsx": $$$10,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -87,6 +89,10 @@ const manifest: DecoManifest = {
           "paragraphs",
         ],
       },
+      "outputSchema": null,
+    },
+    "./sections/Carreiras.tsx": {
+      "inputSchema": null,
       "outputSchema": null,
     },
     "./sections/Depoiments.tsx": {

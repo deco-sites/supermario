@@ -30,11 +30,16 @@ export default {
           '0%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.2)' },
           '100%': { transform: 'scale(1)' }
+        },
+        textMarquee:{
+          '0%':{transform: 'translateX(0)'},
+          'to':{transform: 'translateX(-50%)'}
         }
       },
       animation: {
         'spin-slow': 'spin 3s reverse linear infinite',
-        'pulse-zoom': 'pulseZoom 2s linear infinite'
+        'pulse-zoom': 'pulseZoom 2s linear infinite',
+        'text-Marquee': 'textMarquee 3s linear infinite'
       },
       boxShadow:{
         "buttonsShadow": '#ec8b8b 0px 3px 3px 2px inset, #310709 0px -3px 4px 3px inset'

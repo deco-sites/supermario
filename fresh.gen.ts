@@ -19,7 +19,8 @@ import * as $$$4 from "./sections/Header.tsx";
 import * as $$$5 from "./sections/HeroBanner.tsx";
 import * as $$$6 from "./sections/Informacoes.tsx";
 import * as $$$7 from "./sections/Markdown.tsx";
-import * as $$$8 from "./sections/QuillText.tsx";
+import * as $$$8 from "./sections/Marquee.tsx";
+import * as $$$9 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -43,7 +44,8 @@ const manifest: DecoManifest = {
     "./sections/HeroBanner.tsx": $$$5,
     "./sections/Informacoes.tsx": $$$6,
     "./sections/Markdown.tsx": $$$7,
-    "./sections/QuillText.tsx": $$$8,
+    "./sections/Marquee.tsx": $$$8,
+    "./sections/QuillText.tsx": $$$9,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -413,6 +415,25 @@ const manifest: DecoManifest = {
         "required": [
           "text",
         ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Marquee.tsx": {
+      "inputSchema": {
+        "title": " Marquee",
+        "type": "object",
+        "properties": {
+          "menssage": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Menssage",
+            "description":
+              "Qual mensagem deseja exibir no banner de texto rotativo",
+          },
+        },
+        "required": [],
       },
       "outputSchema": null,
     },

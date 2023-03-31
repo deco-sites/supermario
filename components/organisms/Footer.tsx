@@ -1,4 +1,4 @@
-import NavItem, { navItemProps } from "$start/components/atoms/navItem.tsx";
+import NavItem, { navItemProps } from "$start/components/atoms/NavItem.tsx";
 
 export interface footerProps {
   navItem: navItemProps[];

@@ -15,7 +15,7 @@ export interface paragraphProps{
 export default function About({title,paragraphs}:aboutProps){
 
     return(
-        <div id="#about" class="w-full flex flex-col-reverse justify-center items-center gap-16 py-12 px-8 lg:(flex-row gap-8)">
+        <div id="#about" class="w-full flex flex-col-reverse justify-center items-center gap-16 py-12 px-8 lg:(flex-row gap-8 py-24)">
             <div id="textWrapper" class="lg:w-1/2">
                 <h2 class=" text-[32px] text-[#179c42] font-bold lg:text-[48px]">
                     {title}

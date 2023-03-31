@@ -17,7 +17,7 @@ export default function DepoimentsCarrossel(
   return (
     <div
       id="depoimentsCarrosel"
-      class="w-screen bg-yellow-400 p-12 relative overflow-x-hidden lg:w-[100%]"
+      class="w-screen bg-[#f3cc41] p-12 relative overflow-x-hidden lg:(w-[100%] pt-16 pb-32)"
     >
       <div id="titleWrapper" class="w-full flex flex-col justify-center items-center gap-4 p-6 lg:(px-12 flex-row justify-start gap-[28%])">
         <img

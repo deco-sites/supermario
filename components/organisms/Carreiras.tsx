@@ -1,12 +1,14 @@
-import CarrerCard from "../molecules/CarrerCards.tsx";
+import CarrerCard from "$start/components/molecules/CarrerCards.tsx";
+import Marquee from '$start/components/atoms/Marquee.tsx';
 
 export default function Carreiras() {
   return (
-    <div>
-      <div id="carreiraTitleWrapper" class="flex justify-end items-center gap-8 uppercase py-16">
-        <h2 class="text-[32px] text-[#179c42] font-bold lg:text-[48px]">Carreiras</h2>
+    <div class="bg-marioGradient py-12">
+      <Marquee/>
+      <div id="carreiraTitleWrapper" class="flex justify-center flex-col-reverse items-center gap-5 uppercase pt-12 pb-16 lg:(flex-row gap-8 pl-0 pb-36)">
+        <h2 class="text-[32px] text-[#179c42] font-bold lg:(w-[40%] text-right text-[48px])">Carreiras</h2>
         <img
-          class="w-[280px] h-44 "
+          class="w-[260px] h-[170px] "
           src="/images/apply.png"
           loading="lazy"
           preload="false"

@@ -15,6 +15,10 @@ export default {
         "primary-light": "#C5FFE9",
         transparent: "transparent",
       },
+      backgroundImage:{
+        defaultColorBg: ' rgb(243,204,65)',
+        marioGradient: 'linear-gradient(0deg, rgba(243,204,65,1) 22%, rgba(255,255,255,1) 22%)'
+      },
       fontFamily: {
         sans: ["acumin-pro-wide","rocgrotesc", "sans-serif"],
         serif: ["serif"],
@@ -39,14 +43,14 @@ export default {
       animation: {
         'spin-slow': 'spin 3s reverse linear infinite',
         'pulse-zoom': 'pulseZoom 2s linear infinite',
-        'text-Marquee': 'textMarquee 3s linear infinite'
+        'text-Marquee': 'textMarquee 6s linear infinite'
       },
       boxShadow:{
         "buttonsShadow": '#ec8b8b 0px 3px 3px 2px inset, #310709 0px -3px 4px 3px inset'
       },
       cursor:{
         'fancy': 'url(/icons/cursor.png), pointer'
-      }
+      },
     },
   },
 };

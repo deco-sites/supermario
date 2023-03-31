@@ -4,12 +4,14 @@ export interface navItemProps {
   itemName?: string;
   /** @description Url do item do menu - não utilize caracteres especiais */
   itemUrl?: string;
+
+  className?:string;
   
 }
 
-export default function NavItem({ itemName, itemUrl = "/"}: navItemProps) {
+export default function NavItem({ itemName ="default", itemUrl = "/" , className}: navItemProps) {
   return (
-    <li class="flex md:w-full">
+    <li class={("flex md:w-screen max-w-[400px]")+" "+className}>
       <a
         href={itemUrl?.toString().replaceAll(",", "")
           .replaceAll(" ", "")}

@@ -14,14 +14,15 @@ import * as $$2 from "./islands/SliderJs.tsx";
 import * as $$$0 from "./sections/About.tsx";
 import * as $$$1 from "./sections/Carreiras.tsx";
 import * as $$$2 from "./sections/Depoiments.tsx";
-import * as $$$3 from "./sections/GetStarted.tsx";
-import * as $$$4 from "./sections/Head.tsx";
-import * as $$$5 from "./sections/Header.tsx";
-import * as $$$6 from "./sections/HeroBanner.tsx";
-import * as $$$7 from "./sections/Informacoes.tsx";
-import * as $$$8 from "./sections/Markdown.tsx";
-import * as $$$9 from "./sections/Marquee.tsx";
-import * as $$$10 from "./sections/QuillText.tsx";
+import * as $$$3 from "./sections/Footer.tsx";
+import * as $$$4 from "./sections/GetStarted.tsx";
+import * as $$$5 from "./sections/Head.tsx";
+import * as $$$6 from "./sections/Header.tsx";
+import * as $$$7 from "./sections/HeroBanner.tsx";
+import * as $$$8 from "./sections/Informacoes.tsx";
+import * as $$$9 from "./sections/Markdown.tsx";
+import * as $$$10 from "./sections/Marquee.tsx";
+import * as $$$11 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -40,14 +41,15 @@ const manifest: DecoManifest = {
     "./sections/About.tsx": $$$0,
     "./sections/Carreiras.tsx": $$$1,
     "./sections/Depoiments.tsx": $$$2,
-    "./sections/GetStarted.tsx": $$$3,
-    "./sections/Head.tsx": $$$4,
-    "./sections/Header.tsx": $$$5,
-    "./sections/HeroBanner.tsx": $$$6,
-    "./sections/Informacoes.tsx": $$$7,
-    "./sections/Markdown.tsx": $$$8,
-    "./sections/Marquee.tsx": $$$9,
-    "./sections/QuillText.tsx": $$$10,
+    "./sections/Footer.tsx": $$$3,
+    "./sections/GetStarted.tsx": $$$4,
+    "./sections/Head.tsx": $$$5,
+    "./sections/Header.tsx": $$$6,
+    "./sections/HeroBanner.tsx": $$$7,
+    "./sections/Informacoes.tsx": $$$8,
+    "./sections/Markdown.tsx": $$$9,
+    "./sections/Marquee.tsx": $$$10,
+    "./sections/QuillText.tsx": $$$11,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -144,6 +146,53 @@ const manifest: DecoManifest = {
         },
         "required": [
           "review",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Footer.tsx": {
+      "inputSchema": {
+        "title": " Footer",
+        "type": "object",
+        "properties": {
+          "navItem": {
+            "type": "array",
+            "items": {
+              "title": "navItemProps",
+              "type": "object",
+              "properties": {
+                "itemName": {
+                  "type": [
+                    "string",
+                    "null",
+                  ],
+                  "title": "Item Name",
+                  "description": "Nome item do menu",
+                },
+                "itemUrl": {
+                  "type": [
+                    "string",
+                    "null",
+                  ],
+                  "title": "Item Url",
+                  "description":
+                    "Url do item do menu - não utilize caracteres especiais",
+                },
+                "className": {
+                  "type": [
+                    "string",
+                    "null",
+                  ],
+                  "title": "Class Name",
+                },
+              },
+              "required": [],
+            },
+            "title": "Nav Item",
+          },
+        },
+        "required": [
+          "navItem",
         ],
       },
       "outputSchema": null,
@@ -297,6 +346,13 @@ const manifest: DecoManifest = {
                       "title": "Item Url",
                       "description":
                         "Url do item do menu - não utilize caracteres especiais",
+                    },
+                    "className": {
+                      "type": [
+                        "string",
+                        "null",
+                      ],
+                      "title": "Class Name",
                     },
                   },
                   "required": [],

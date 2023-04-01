@@ -32,6 +32,7 @@ export default function HeadComponent({
         property="og:image"
         content={imageUrl}
       />
+      <meta name="robots" content="noindex"></meta>
       <link
         rel="shortcut icon"
         href={faviconUrl}

@@ -1,6 +1,7 @@
 import { AppProps } from "$fresh/server.ts";
 import { context } from "$live/live.ts";
 import GoogleTagManager from "partytown/integrations/GoogleTagManager.tsx";
+import Credits from "$start/components/atoms/Credits.tsx";
 
 const trackingId = "";
 
@@ -12,6 +13,7 @@ export default function App(props: AppProps) {
         <GoogleTagManager trackingId={trackingId} />
       )}
       <props.Component />
+      <Credits/>
     </>
   );
 }

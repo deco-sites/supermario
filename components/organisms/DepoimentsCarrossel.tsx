@@ -13,7 +13,7 @@ export interface DepoimentsCarrosselProps {
 export default function DepoimentsCarrossel(
   { review }: DepoimentsCarrosselProps,
 ) {
-  console.log(review);
+
   return (
     <div
       id="depoimentsCarrosel"

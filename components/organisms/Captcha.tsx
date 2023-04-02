@@ -42,11 +42,11 @@ export default function Captcha() {
 
     return (
       <div id="captchaWrapper" class="bg-[#139c43] m-[30px] p-[6px] relative lg:(w-[29%])">
-        <span>Clique em</span>
-        <h3 class="uppercase">{nameOfCaptcha}</h3>
+        <span class="text-white font-bold pl-4">Clique em</span>
+        <h3 class="uppercase text-white text-[20px] font-bold pl-4">{nameOfCaptcha}</h3>
         <ul class="flex flex-wrap justify-center items-center lg:(w-[350px] m-auto)">
           <img
-            class="absolute top-[53px] px-2 lg:(w-[355px] h-[335px] )"
+            class="absolute top-[60px] px-2 lg:(w-[355px] h-[335px] )"
             src={imageOfCaptcha}
             alt="resolva o desafio do carro"
             title="resolva o desafio do carro"

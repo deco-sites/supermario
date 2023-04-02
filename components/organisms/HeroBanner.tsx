@@ -114,7 +114,7 @@ export default function HeroBanner(
             preload="false"
             height={100}
             width={100}
-            alt="tampa de esgoto"
+            alt="certificado dos irmãos"
           />
           <TextSlider/>
         </div>

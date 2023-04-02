@@ -31,15 +31,19 @@ export default function HeroBanner(
 ) {
   const [visible, setVisible] = useState(false);
 
+  useEffect(() => {
+    console.log(visible);
+  }, [visible]);
+
   function loadIframe() {
     console.log(visible);
 
     return (
-      <div class="w-full absolute top-0 left-0 z-10">
+      <div class="flex justify-center items-center w-screen h-screen fixed  bg-black overflow-hidden top-0 left-0 z-[9] lg:(left-[0%] top-[20px])">
         <iframe
-          class="object-contain"
-          width="560"
-          height="315"
+          class="object-contain w-full h-[42%] lg:h-[80%]"
+          width="860"
+          height="615"
           src={"https://www.youtube.com/embed/" +
             videoConfiguracoes.videoUrlCode + "?autoplay=1"}
           title="YouTube video player"
@@ -52,8 +56,8 @@ export default function HeroBanner(
     );
   }
 
-  function sliderMsg(){
-    console.log("call")
+  function sliderMsg() {
+    console.log("call");
     const [msg, setMsg] = useState("");
     const [msgIndex, setMsgIndex] = useState(0);
     const listMsg = [
@@ -61,26 +65,38 @@ export default function HeroBanner(
       "Trabalho confiável e de qualidade!",
       "Satisfação garantida!",
       "Conhecidos na vizinhança!",
-    ]
-    
-    setTimeout(()=>{
-      if(msgIndex > listMsg.length){
+    ];
+
+    setTimeout(() => {
+      if (msgIndex > listMsg.length) {
         setMsg(listMsg[0]);
         setMsgIndex(0);
-      }else{
+      } else {
         setMsg(listMsg[msgIndex]);
-        setMsgIndex(msgIndex+1);
+        setMsgIndex(msgIndex + 1);
       }
-      
-      
-    },4000);
-    return(
-      <p id="slide" class="w-auto absolute left-[12rem]">{msg}</p>
-    )
+    }, 4000);
+    return <p id="slide" class="w-auto absolute left-[12rem]">{msg}</p>;
   }
 
   return (
     <div class="md:flex flex-col-reverse bg-[#f3cc41] pt-28 pb-12 md:(pt-[4.7rem] pb-8)">
+      {
+        visible ?  <div
+        id="botaoCloseVideo"
+        onClick={() => setVisible(false)}
+        class="w-[32px] fixed left-6 top-[8rem]  z-30 lg:(w-[50px])"
+        aria-label="Close the footer"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff">
+          <path
+            d="M7.292 8L1.146 1.854a.502.502 0 01.708-.708L8 7.292l6.146-6.146a.502.502 0 01.708.708L8.708 8l6.146 6.146a.502.502 0 01-.708.708L8 8.708l-6.146 6.146A.502.502 0 011.5 15s-.256-.049-.354-.146a.502.502 0 010-.708L7.292 8z"
+            fill-rule="evenodd"
+          >
+          </path>
+        </svg>
+      </div> : null
+      }
       <div class="flex flex-col">
         <div class="w-full h-auto flex flex-col justify-start items-center 
       md:(flex-row justify-around pt-8)">
@@ -133,7 +149,8 @@ export default function HeroBanner(
             width={100}
             alt="tampa de esgoto"
           />
-          <style dangerouslySetInnerHTML={{
+          <style
+            dangerouslySetInnerHTML={{
               __html: `
               @keyframes fadeIn{
                 0%{opacity: 0}
@@ -144,7 +161,8 @@ export default function HeroBanner(
                 animation: fadeIn 4s ease-in-out infinite
               }
               `,
-            }}>
+            }}
+          >
           </style>
           {sliderMsg()}
         </div>

@@ -106,6 +106,7 @@ export default function HeadComponent({
           }
           *{
             cursor: url(/icons/cursor.png),default !important;
+            scroll-behavior: smooth
           }
           
           *::-webkit-scrollbar {

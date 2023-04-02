@@ -3,9 +3,9 @@ import { useState } from "preact/hooks";
 export default function Credits() {
   const [active, setActive] = useState("-330px");
   return (
-    <div class="bg-[#f3cc41] p-12 font-[acumin-pro-wide,sans-serif] m-0 lg:relative">
+    <div class="bg-[#f3cc41] p-12 font-[acumin-pro-wide,sans-serif] m-0 z-20 lg:relative">
       <button
-        onClick={() => setActive(active === "0" ? "-330px" : "0px")}
+        onClick={() => setActive("0")}
         class="bg-[hsla(0,0%,100%,.5)] border-1 border-[rgba(35,35,35,.5)] px-4 py-2 focus:outline-none hover:(outline-none)"
         aria-label="Expand the footer"
       >

@@ -25,14 +25,17 @@ export default function About({title,paragraphs}:aboutProps){
                 }
             </div>   
             <div id="sideBannerWrapper" class="relative">
-                <img 
-                    class="w-full max-h-[400px] h-[110vw] lg:(h-[605px] w-[378px] max-h-[720px])"
-                    src="images/about.webp"
-                    title="irmãos encanadores mario e luigi"
-                    alt="irmãos encanadores mario e luigi"
-                    loading="lazy"
-                    fetchpriority="low"
-                />
+                <picture loading="lazy">
+                    <source srcset="images/about.webp" media="(min-width:800px)" width="800" height="300"/>
+                    <img 
+                        class="w-full max-h-[400px] h-[110vw] lg:(h-[605px] w-[378px] max-h-[720px])"
+                        src="images/aboutMobile.webp"
+                        title="irmãos encanadores mario e luigi"
+                        alt="irmãos encanadores mario e luigi"
+                        loading="lazy"
+                        fetchpriority="low"
+                    />
+                </picture>
                 <div class="w-[136px] h-[136px] flex items-center justify-center absolute top-72 left-32 bg-[#f81722] shadow-buttonsShadow rounded-1/2 lg:(w-[186px] h-[186px] top-[27rem] left-52 )">
                 <img 
                     class="w-[110px] h-[110px] animate-spin-slow lg:(w-[156px] h-[156px])"

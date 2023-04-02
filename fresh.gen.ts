@@ -25,9 +25,7 @@ import * as $$$7 from "./sections/Head.tsx";
 import * as $$$8 from "./sections/Header.tsx";
 import * as $$$9 from "./sections/HeroBanner.tsx";
 import * as $$$10 from "./sections/Informacoes.tsx";
-import * as $$$11 from "./sections/Markdown.tsx";
-import * as $$$12 from "./sections/Marquee.tsx";
-import * as $$$13 from "./sections/QuillText.tsx";
+import * as $$$11 from "./sections/Marquee.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -57,9 +55,7 @@ const manifest: DecoManifest = {
     "./sections/Header.tsx": $$$8,
     "./sections/HeroBanner.tsx": $$$9,
     "./sections/Informacoes.tsx": $$$10,
-    "./sections/Markdown.tsx": $$$11,
-    "./sections/Marquee.tsx": $$$12,
-    "./sections/QuillText.tsx": $$$13,
+    "./sections/Marquee.tsx": $$$11,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -482,22 +478,6 @@ const manifest: DecoManifest = {
       },
       "outputSchema": null,
     },
-    "./sections/Markdown.tsx": {
-      "inputSchema": {
-        "title": " Markdown",
-        "type": "object",
-        "properties": {
-          "text": {
-            "type": "string",
-            "title": "Text",
-          },
-        },
-        "required": [
-          "text",
-        ],
-      },
-      "outputSchema": null,
-    },
     "./sections/Marquee.tsx": {
       "inputSchema": {
         "title": " Marquee",
@@ -514,23 +494,6 @@ const manifest: DecoManifest = {
           },
         },
         "required": [],
-      },
-      "outputSchema": null,
-    },
-    "./sections/QuillText.tsx": {
-      "inputSchema": {
-        "title": " Quill Text",
-        "type": "object",
-        "properties": {
-          "html": {
-            "format": "html",
-            "type": "string",
-            "title": "Html",
-          },
-        },
-        "required": [
-          "html",
-        ],
       },
       "outputSchema": null,
     },

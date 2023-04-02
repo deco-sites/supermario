@@ -66,6 +66,7 @@ export default function DepoimentsCarrossel(
             </button>
           </div>
         </div>
+        
         <div class="hidden relative sm:block z-10 col-start-3 row-start-3 sm:top-4">
           <div class="absolute right-[108px] bg-interactive-inverse rounded-full border-default border-0">
             <button

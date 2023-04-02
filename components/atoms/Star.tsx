@@ -8,7 +8,7 @@ export default function Star({active}:StarProps){
     {
         active === true ? 
         <img 
-        class="w-7 h-7 lg:(w-8 h-8)"
+        class="w-7 h-[25px] lg:(w-8 h-[28px])"
         src="icons/fourstarsOn.webp"
         title="estrela de avaliação"
         alt="estrela de avaliação"
@@ -16,7 +16,7 @@ export default function Star({active}:StarProps){
         fetchpriority="low"
         />
         : <img 
-        class="w-7 h-7 lg:(w-8 h-8)"
+        class="w-7 h-[25px] lg:(w-8 h-[28px])"
         src="icons/fourstarsOff.webp"
         title="estrela de avaliação"
         alt="estrela de avaliação"

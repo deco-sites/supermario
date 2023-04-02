@@ -39,8 +39,10 @@ export default function Credits() {
         <img
           class="w-auto h-8 object-contain"
           src="images/legal-logos.webp"
-          title="super mario plumbing"
-          alt="super mario plumbing"
+          title="Legal logos"
+          alt="Legal logos"
+          width="300"
+          headers="60"
           loading="lazy"
           fetchpriority="low"
         />

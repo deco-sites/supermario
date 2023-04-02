@@ -18,10 +18,8 @@ export default function Credits() {
           " " + `bottom-[${active}]`}
       >
         <div
-          role="button"
           onClick={() => setActive("-330px")}
           class="w-[16px] absolute left-6 top-6 lg:hidden"
-          aria-labelby="Close the footer in mobile"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
             <path

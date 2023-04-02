@@ -35,7 +35,7 @@ export default function Captcha() {
 
       if (theSecretIsvalid) {
         window.localStorage.setItem("activeSectionAtendimento", "true");
-        window.location.href = "/#atendimento";
+        window.location.href = "/#./sections/Atendimento.tsx-cf3d";
       } else {
         alert("você errou a combinação secreta dos super irmãos")
         window.location.reload()

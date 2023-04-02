@@ -2,26 +2,32 @@ export default function BrothersCTA(){
     return(
         <div class="w-screen flex justify-around items-center pt-8 px-4 md:(w-[36vw] justify-center gap-16 )">
         <div id="brotherWrapper" class="flex justify-center items-center">
-          <img
-            class="w-1/2 h-64 md:(w-[60%] h-[20vw])"
-            src="/images/mario.webp"
-            loading="lazy"
-            preload="false"
-            height="300"
-            width="500"
-            alt="personagem mario encanador"
-            title="Mario"
+          <picture loading="lazy">
+            <source srcset="/images/mario.webp" media="(min-width:800px)" width="800" height="300"/>
+            <img
+              class="w-[108px] h-[257px] md:(w-[60%] h-[20vw])"
+              src="/images/marioMobile.webp"
+              loading="lazy"
+              preload="false"
+              height="300"
+              width="500"
+              alt="personagem mario encanador"
+              title="Mario"
           />
-          <img
-            class="w-1/2 h-64 md:(w-[60%] h-[20vw])"
-            src="/images/luigi.webp"
-            loading="lazy"
-            preload="false"
-            height="300"
-            width="500"
-            alt="personagem luigi encanador"
-            title="Luigi"
-          />
+          </picture>
+          <picture loading="lazy">
+            <source srcset="/images/luigi.webp" media="(min-width:800px)" width="800" height="300"/>
+            <img
+              class="w-[108px] h-[257px] md:(w-[60%] h-[20vw])"
+              src="/images/luigiMobile.webp"
+              loading="lazy"
+              preload="false"
+              height="300"
+              width="500"
+              alt="personagem luigi encanador"
+              title="Luigi"
+            />
+          </picture>
         </div>
 
         <div class="flex flex-col gap-8 md:gap-12">

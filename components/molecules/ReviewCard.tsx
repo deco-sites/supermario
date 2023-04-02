@@ -16,7 +16,7 @@ export default function ReviewCard(
   { rating=0, name, userImage, textReview }: ReviewCardProps,
 ) {
   return (
-    <div id="reviewCardWrapper" class="w-80 h-60 p-6 relative flex flex-col gap-6 rounded-3xl bg-white lg:(w-[22rem] h-60)">
+    <div id="reviewCardWrapper" class="w-80 h-60 p-6 relative flex flex-col gap-4 rounded-3xl bg-white lg:(w-[22rem] h-64)">
       <div id="userInforWrapper" class="flex justify-center items-start gap-4">
         <img
           class="w-16 h-16 rounded-1/2 lg:(w-20 h-20)"
@@ -34,10 +34,10 @@ export default function ReviewCard(
             <Star active={rating < 4 ? false : true} />
             <Star active={rating < 5 ? false : true} />
           </div>
-          <h3 class="font-bold">{name}</h3>
+          <h3 class="font-bold font-sans">{name}</h3>
         </div>
       </div>
-      <p class="leading-4">
+      <p class="leading-[1.1rem] text-[16px] font-sans font-thin">
         {textReview}
       </p>
     </div>

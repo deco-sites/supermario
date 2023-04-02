@@ -34,7 +34,7 @@ export default function DepoimentsCarrossel(
       </div>
       <Slider
         class="gap-3 w-screen relative -left-12 px-6 lg:(w-[92%] left-12 pr-3 p-0 overflow-hidden)"
-        snap="block py-4"
+        snap="block py-1"
       >
         {review?.map((item) => (
           <ReviewCard

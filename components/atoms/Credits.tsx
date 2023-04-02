@@ -19,7 +19,7 @@ export default function Credits() {
         <div
           onClick={() => setActive("-330px")}
           class="w-[16px] absolute left-6 top-6 lg:hidden"
-          aria-label="Close the footer"
+          aria-labelby="Close the footer in mobile"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
             <path
@@ -30,6 +30,7 @@ export default function Credits() {
           </svg>
         </div>
         <button
+          role="button"
           onClick={() => setActive("-330px")}
           class="hidden lg:(block w-[150px] absolute left-[50px] bottom-[50px] bg-[hsla(0,0%,100%,.5)] border-1 border-[rgba(35,35,35,.5)] px-4 py-2 focus:outline-none hover:(outline-none))"
           aria-label="Close the footer"

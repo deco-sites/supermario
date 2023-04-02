@@ -17,7 +17,7 @@ export default function Header({ imageProps}: Props) {
           />
         </h1>
         <div id="contact-wrapper" class="flex gap-2 text-[12px]">
-          <div class="w-full bg-[#f81722] py-0.5 border-t-2 pl-1.5 pr-4 md:(py-2 px-3) border-[#f3777d] uppercase">
+          <div class="w-full bg-[#B10C10] py-0.5 border-t-2 pl-1.5 pr-4 md:(py-2 px-3) border-[#f3777d] uppercase">
             <a
               class="flex justify-center items-center text-center gap-2 text-white leading-4 tracking-wider	font-black md:text-[14px]"
               href="https://www.universalpics.com.br/micro/super-mario-bros"
@@ -34,7 +34,7 @@ export default function Header({ imageProps}: Props) {
               />
             </a>
           </div>
-          <div class="w-auto flex justify-center items-start gap-2 p-0.5 text-[#f81621] leading-[0.90rem] md:(items-center  leading-5)">
+          <div class="w-auto flex justify-center items-start gap-2 p-0.5 text-[#B10C10] leading-[0.90rem] md:(items-center  leading-5)">
             <img
               class="w-8 h-8 max-w-[80px] max-h-[42px] md:(w-10 h-10)"
               src="icons/contact.webp"

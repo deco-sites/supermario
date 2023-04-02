@@ -29,6 +29,7 @@ export default function Image(
         title={title}
         preload="true"
         loading="eager"
+        decoding={preCarregarImagem ? "sync":"async"}
         fetchpriority="high"
       />
     </>

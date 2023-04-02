@@ -426,6 +426,12 @@ const manifest: DecoManifest = {
                 "title": "Poster",
                 "description": "imagem poster do vídeo",
               },
+              "posterMobile": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Poster Mobile",
+                "description": "imagem poster mobile do vídeo",
+              },
               "altText": {
                 "type": [
                   "string",
@@ -451,6 +457,7 @@ const manifest: DecoManifest = {
             },
             "required": [
               "poster",
+              "posterMobile",
               "seoTitle",
             ],
           },

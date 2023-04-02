@@ -21,6 +21,9 @@ export interface videoProps {
   /** @description imagem poster do vídeo */
   poster: Image;
 
+ /** @description imagem poster mobile do vídeo */
+  posterMobile: Image;
+
   /** @description SEO texto alternative */
   altText?: string;
 
@@ -65,6 +68,7 @@ export default function HeroBanner(
         <div class="w-full h-auto flex flex-col justify-start items-center 
       md:(flex-row justify-around pt-8)">
           <div class="flex flex-col items-center text-center uppercase font-grotesk text-[#242424]">
+            
             <ImageHero
               {...imageProps}
               className=" object-contain w-[228px] h-32 max-w-[300px] md:(w-1/2 h-36)"
@@ -84,19 +88,18 @@ export default function HeroBanner(
             class="w-auto h-auto relative py-8 md:(pt-16 pb-0)"
             onClick={() => setIframeVisible(true)}
           >
-            <ImageHero
+            <picture loading="eager">
+              <source srcset={videoConfiguracoes?.poster} media="(min-width:800px)" width="800" height="300"/>
+              <ImageHero
               {...imageProps}
-              src={videoConfiguracoes?.poster}
+              src={videoConfiguracoes?.posterMobile}
               altText={videoConfiguracoes?.altText}
               title={videoConfiguracoes?.seoTitle}
               preCarregarImagem={true}
-              className="
-            p-0
-            object-contain 
-            w-full max-w-[800px]
-            h-[300px] 
-            md:(w-screen h-[73vh])"
+              className="p-0 object-contain w-full max-w-[800px] h-[300px] md:(w-screen h-[73vh])"
             />
+            </picture>
+           
             {videoConfiguracoes?.videoUrlCode && iframeVisible ? <YutubeVideoIframe videoUrlCode={videoConfiguracoes?.videoUrlCode}/> : null}
           </div>
         </div>

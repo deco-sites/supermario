@@ -24,6 +24,7 @@ export default function ReviewCard(
           title="estrela de avaliação"
           alt="estrela de avaliação"
           loading="lazy"
+          decoding="async"
           fetchpriority="low"
         />
         <div class="flex flex-col justify-center items-center gap-3">

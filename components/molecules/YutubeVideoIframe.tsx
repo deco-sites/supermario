@@ -10,7 +10,7 @@ export default function YutubeVideoIframe({videoUrlCode}:videoUrlProps) {
           width="860"
           height="615"
           src={"https://www.youtube.com/embed/" +
-          videoUrl + "?autoplay=1"}
+          videoUrlCode + "?autoplay=1"}
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

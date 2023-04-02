@@ -47,7 +47,7 @@ export default function DepoimentsCarrossel(
         ))}
       </Slider>
       <div class="hidden lg:block absolute top-[50%] w-full">
-        <div class="hidden relative sm:block z-10 col-start-1 row-start-3 sm:top-12">
+        <div class="hidden relative sm:block z-10 col-start-1 row-start-3 sm:top-4">
           <div class="absolute left-[0px]  bg-interactive-inverse rounded-full border-default border-0 ">
             <button
               class="outline-none cursor-fancy focus:outline-none hover:(outline-none cursor-fancy)"
@@ -66,7 +66,7 @@ export default function DepoimentsCarrossel(
             </button>
           </div>
         </div>
-        <div class="hidden relative sm:block z-10 col-start-3 row-start-3 sm:top-12">
+        <div class="hidden relative sm:block z-10 col-start-3 row-start-3 sm:top-4">
           <div class="absolute right-[108px] bg-interactive-inverse rounded-full border-default border-0">
             <button
               class="outline-none cursor-fancy focus:outline-none hover:(outline-none cursor-fancy)"

@@ -51,8 +51,8 @@ export default function DepoimentsCarrossel(
           <div class="absolute left-[0px]  bg-interactive-inverse rounded-full border-default border-0 ">
             <button
               class="outline-none cursor-fancy focus:outline-none hover:(outline-none cursor-fancy)"
-              data-slide="next"
-              aria-label="Next item"
+              data-slide="prev"
+              aria-label="Previous item"
             >
               <svg
                 class="rotate-180 scale-[2.5] outline-none"
@@ -71,8 +71,8 @@ export default function DepoimentsCarrossel(
           <div class="absolute right-[108px] bg-interactive-inverse rounded-full border-default border-0">
             <button
               class="outline-none cursor-fancy focus:outline-none hover:(outline-none cursor-fancy)"
-              data-slide="prev"
-              aria-label="Previous item"
+              data-slide="next"
+              aria-label="Next item"
             >
               <svg
                 class="scale-[2.5] outline-none"

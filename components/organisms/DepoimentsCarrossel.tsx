@@ -28,7 +28,7 @@ export default function DepoimentsCarrossel(
           loading="lazy"
           fetchpriority="low"
         />
-        <h2 class="font-bold text-3xl text-[#189c41] uppercase pt-4 lg:pt-0">
+        <h2 class="font-bold text-3xl text-[#178239] uppercase pt-4 lg:pt-0">
           Depoimentos
         </h2>
       </div>

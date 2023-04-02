@@ -1,9 +1,11 @@
 import CaptchaItem from "$start/components/atoms/CaptchaItem.tsx";
-import { useEffect } from "hooks/preact";
+import { useEffect } from "preact/hooks";
 
 export default function Captcha() {
 
-  localStorage.setItem("activeSectionAtendimento", "false");
+  useEffect(() => {
+      window.localStorage.setItem("activeSectionAtendimento", "false");
+  }, []);
 
   function getCaptcha() {
 
@@ -32,7 +34,7 @@ export default function Captcha() {
       );
 
       if (theSecretIsvalid) {
-        localStorage.setItem("activeSectionAtendimento", "true");
+        window.localStorage.setItem("activeSectionAtendimento", "true");
         window.location.href = "/#atendimento";
       } else {
         alert("você errou a combinação secreta dos super irmãos")

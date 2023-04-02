@@ -5,7 +5,7 @@ export default function BrothersCTA(){
           <picture loading="lazy">
             <source srcset="/images/mario.webp" media="(min-width:800px)" width="800" height="300"/>
             <img
-              class="w-[108px] h-[257px] md:(w-[60%] h-[20vw])"
+              class="w-[108px] h-[257px] md:(w-full h-[286px])"
               src="/images/marioMobile.webp"
               loading="lazy"
               preload="false"
@@ -18,7 +18,7 @@ export default function BrothersCTA(){
           <picture loading="lazy">
             <source srcset="/images/luigi.webp" media="(min-width:800px)" width="800" height="300"/>
             <img
-              class="w-[108px] h-[257px] md:(w-[60%] h-[20vw])"
+              class="w-[108px] h-[257px] md:(w-full h-[286px])"
               src="/images/luigiMobile.webp"
               loading="lazy"
               preload="false"

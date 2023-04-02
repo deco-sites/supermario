@@ -1,7 +1,12 @@
 import type { Image } from "$live/std/ui/types/Image.ts";
+
+//atoms imports
 import ImageHero,{ ImageProps } from "$start/components/atoms/Image.tsx";
+
+//molecules imports
 import NavMain,{ navMainProps } from "$start/components/molecules/NavMain.tsx";
 import BrothersCTA from "$start/components/molecules/brothersCTA.tsx";
+import YutubeVideoIframe  from "$start/components/molecules/YutubeVideoIframe.tsx";
 import TextSlider from "$start/components/molecules/TextSlider.tsx";
 
 import { useState } from "preact/hooks";
@@ -30,25 +35,6 @@ export default function HeroBanner(
   { imageProps, videoConfiguracoes, mainMenu }: Props,
 ) {
   const [iframeVisible, setIframeVisible] = useState(false);
-
-  function loadIframe() {
-    return (
-      <div class="flex justify-center items-center w-screen h-screen fixed  bg-black overflow-hidden top-0 left-0 z-[9] lg:(left-[0%] top-[20px])">
-        <iframe
-          class="object-contain w-full h-[42%] lg:h-[80%]"
-          width="860"
-          height="615"
-          src={"https://www.youtube.com/embed/" +
-            videoConfiguracoes.videoUrlCode + "?autoplay=1"}
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
-    );
-  }
 
 
   return (
@@ -111,7 +97,7 @@ export default function HeroBanner(
             h-[300px] 
             md:(w-screen h-[73vh])"
             />
-            {videoConfiguracoes?.videoUrlCode && iframeVisible ? loadIframe() : null}
+            {videoConfiguracoes?.videoUrlCode && iframeVisible ? <YutubeVideoIframe videoUrlCode={videoConfiguracoes?.videoUrlCode}/> : null}
           </div>
         </div>
         <div

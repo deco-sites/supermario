@@ -1,4 +1,5 @@
 import CaptchaItem from "$start/components/atoms/CaptchaItem.tsx";
+import { useEffect } from "hooks/preact";
 
 export default function Captcha() {
 

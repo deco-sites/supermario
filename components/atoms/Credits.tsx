@@ -5,6 +5,7 @@ export default function Credits() {
   return (
     <div class="bg-[#f3cc41] p-12 font-[acumin-pro-wide,sans-serif] m-0 z-20 lg:relative">
       <button
+        role="button"
         onClick={() => setActive("0")}
         class="bg-[hsla(0,0%,100%,.5)] border-1 border-[rgba(35,35,35,.5)] px-4 py-2 focus:outline-none hover:(outline-none)"
         aria-label="Expand the footer"
@@ -17,6 +18,7 @@ export default function Credits() {
           " " + `bottom-[${active}]`}
       >
         <div
+          role="button"
           onClick={() => setActive("-330px")}
           class="w-[16px] absolute left-6 top-6 lg:hidden"
           aria-labelby="Close the footer in mobile"
@@ -54,7 +56,7 @@ export default function Credits() {
         >
           Política De Privacidade
         </a>
-        <p class="text-[rgba(35,35,35,.3)]">
+        <p class="text-[#595959]">
           PLATFORM © 2023 POWSTER © 2023 Nintendo and Universal Studios. TODOS
           OS DIREITOS RESERVADOS.
         </p>

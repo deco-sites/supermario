@@ -8,7 +8,7 @@ export interface navMainProps {
 export default function NavMain({ navItem }: navMainProps) {
   return (
     <nav>
-      <ul class="flex flex-col justify-center items-center gap-6 md:(flex-row gap-1)">
+      <ul class="flex flex-col justify-center items-center gap-6 md:(flex-row gap-1) font-sans font-bold">
         {navItem?.map((item) => {
           return <NavItem itemName={item.itemName} itemUrl={item.itemUrl} />;
         })}

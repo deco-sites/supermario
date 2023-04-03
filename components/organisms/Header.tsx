@@ -8,7 +8,7 @@ export type Props = {
 export default function Header({ imageProps}: Props) {
   return (
     <div class="bg-white w-full py-2 px-2 flex flex-col md:(flex-row px-6) gap-4 fixed z-10 border-black border-b-1">
-      <audio id="phone-ring-audio" src="audio/phone-ring.mp3"></audio>
+      {/* <audio id="phone-ring-audio" src="audio/phone-ring.mp3"></audio> */}
       <div class="flex justify-around items-center md:(justify-between w-full)">
         <h1>
           <Image
@@ -36,7 +36,7 @@ export default function Header({ imageProps}: Props) {
           </div>
           <div class="w-auto flex justify-center items-start gap-2 p-0.5 text-[#B10C10] leading-[0.90rem] md:(items-center  leading-5)">
             <img
-              class="w-8 h-8 max-w-[80px] max-h-[42px] md:(w-10 h-10)"
+              class="w-8 h-8 max-w-[80px] max-h-[42px] md:(w-10 h-[38px])"
               src="icons/contact.webp"
               width="100"
               height="100"

@@ -38,7 +38,7 @@ export default function BrothersCTA(){
           />
           <a href="https://www.youtube.com/watch?v=iL6-Q62CjbA" class="relative group" target="_blank">
             <img
-              class="w-full h-[45px] absolute z-[2] duration-1000 transition-transform group-hover:(duration-1000 ease-in-out transition-transform translate-x-1/3 ) lg:h-[52px] "
+              class="w-full h-[45px] absolute z-[2] duration-1000 transition-transform group-hover:(duration-1000 ease-in-out transition-transform translate-x-1/3 ) lg:h-[49px] "
               src="/images/NovoProjeto.webp"
               loading="lazy"
               preload="false"

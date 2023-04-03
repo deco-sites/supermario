@@ -28,7 +28,7 @@ export default function Image(
         alt={altText}
         title={title}
         preload={preCarregarImagem ? "true":"false"}
-        loading="eager"
+        loading={preCarregarImagem ? "eager":"lazy"}
         decoding={preCarregarImagem ? "sync":"async"}
       />
     </>

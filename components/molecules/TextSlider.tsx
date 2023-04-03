@@ -1,6 +1,6 @@
 export default function TextSlider() {
   return (
-    <div class="text-[#178239]">
+    <div class="text-[#10652B]">
       <p
         id="slide"
         class="w-auto absolute left-[12rem] font-grotesk uppercase animate-slideFadeIn1"

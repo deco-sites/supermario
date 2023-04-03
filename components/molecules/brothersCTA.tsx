@@ -42,8 +42,8 @@ export default function BrothersCTA(){
               src="/images/NovoProjeto.webp"
               loading="lazy"
               preload="false"
-              height={111}
-              width={45}
+              height={330}
+              width={133}
               alt="tampa de esgoto"
             />
             <div class="w-[80%] h-8 relative top-2 -left-4 z-[1] bg-black rounded-1/2 border-t-2 border-4 border-[#c8a82f] md:(h-10 top-1 border-t-2 border-[6px])" />

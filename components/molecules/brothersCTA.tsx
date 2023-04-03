@@ -9,8 +9,6 @@ export default function BrothersCTA(){
               src="/images/marioMobile.webp"
               loading="lazy"
               preload="false"
-              height="300"
-              width="500"
               alt="personagem mario encanador"
               title="Mario"
           />
@@ -22,8 +20,6 @@ export default function BrothersCTA(){
               src="/images/luigiMobile.webp"
               loading="lazy"
               preload="false"
-              height="300"
-              width="500"
               alt="personagem luigi encanador"
               title="Luigi"
             />

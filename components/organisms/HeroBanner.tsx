@@ -66,15 +66,15 @@ export default function HeroBanner(
         : null}
       <div class="flex flex-col">
         <div class="w-full h-auto flex flex-col justify-start items-center 
-      md:(flex-row justify-around pt-8)">
-          <div class="flex flex-col items-center text-center uppercase font-grotesk text-[#242424]">
+      md:(flex-row justify-around pt-8 pl-16)">
+          <div class="flex flex-col items-center text-center p-[9px] uppercase font-grotesk text-[#242424]">
             
             <ImageHero
               {...imageProps}
               className=" object-contain w-[228px] h-32 max-w-[300px] md:(w-1/2 h-36)"
             />
-            <h2 class="text-3xl">
-              Empresa 100<span class="font-sans font-bold">%</span>familiar
+            <h2 class="pt-2 leading-8 text-[33px] lg:leading-[3rem]">
+              Empresa 100<span class="font-sans font-bold">%</span> familiar
             </h2>
             <h3 class="text-2xl text-[1.6rem]">
               Consertar canos é a nossa diversão!
@@ -85,7 +85,7 @@ export default function HeroBanner(
           </div>
 
           <div
-            class="w-auto h-auto relative py-8 md:(pt-16 pb-0)"
+            class="w-auto h-auto relative py-8 md:(pt-0 pb-0)"
             onClick={() => setIframeVisible(true)}
           >
             <picture loading="eager">
@@ -96,7 +96,7 @@ export default function HeroBanner(
               altText={videoConfiguracoes?.altText}
               title={videoConfiguracoes?.seoTitle}
               preCarregarImagem={true}
-              className="p-0 object-contain w-full max-w-[800px] h-[300px] md:(w-screen h-[73vh])"
+              className="p-0 object-contain w-full max-w-[830px] h-[300px] md:(w-screen h-[74vh]) lg:(relative -top-[35px])"
             />
             </picture>
            

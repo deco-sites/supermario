@@ -21,7 +21,7 @@ export default function About({title,paragraphs}:aboutProps){
                     {title}
                 </h2>
                 {
-                    paragraphs.map(paragraph =><p class="pt-4">{paragraph.description}</p>)
+                    paragraphs.map(paragraph =><p class="pt-4 font-sans font-bold lg:text-[20px]">{paragraph.description}</p>)
                 }
             </div>   
             <div id="sideBannerWrapper" class="relative">

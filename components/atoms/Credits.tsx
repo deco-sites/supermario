@@ -3,11 +3,11 @@ import { useState } from "preact/hooks";
 export default function Credits() {
   const [active, setActive] = useState("-330px");
   return (
-    <div class="bg-[#f3cc41] p-12 font-[acumin-pro-wide,sans-serif] m-0 z-20 lg:relative">
+    <div class="bg-[#f3cc41] p-12 m-0 z-20 lg:relative">
       <button
         role="button"
         onClick={() => setActive("0")}
-        class="bg-[hsla(0,0%,100%,.5)] border-1 border-[rgba(35,35,35,.5)] px-4 py-2 focus:outline-none hover:(outline-none)"
+        class="absolute left-0 w-screen h-[6.4vh] bg-[hsla(0,0%,100%,.5)] border-1 border-[rgba(35,35,35,.5)] px-4 py-2 focus:outline-none hover:(outline-none) lg:(relative w-auto h-auto) font-sans font-thin"
         aria-label="Expand the footer"
       >
         Créditos & Legal
@@ -32,7 +32,7 @@ export default function Credits() {
         <button
           role="button"
           onClick={() => setActive("-330px")}
-          class="hidden lg:(block w-[150px] absolute left-[50px] bottom-[50px] bg-[hsla(0,0%,100%,.5)] border-1 border-[rgba(35,35,35,.5)] px-4 py-2 focus:outline-none hover:(outline-none))"
+          class="hidden lg:(block w-[150px] absolute left-[50px] bottom-[50px] bg-[hsla(0,0%,100%,.5)] border-1 border-[rgba(35,35,35,.5)] px-4 py-2 focus:outline-none hover:(outline-none))  font-sans font-thin"
           aria-label="Close the footer"
         >
           Fechar
@@ -45,7 +45,7 @@ export default function Credits() {
           width="300"
           headers="60"
           loading="lazy"
-          fetchpriority="low"
+          preload="false"
         />
         <a
           href="https://www.nbcuniversal.com/privacy-policies/privacy-portuguese"
@@ -54,7 +54,7 @@ export default function Credits() {
         >
           Política De Privacidade
         </a>
-        <p class="text-[#595959]">
+        <p class="text-[#0404048c] text-[12px] font-sans font-thin">
           PLATFORM © 2023 POWSTER © 2023 Nintendo and Universal Studios. TODOS
           OS DIREITOS RESERVADOS.
         </p>

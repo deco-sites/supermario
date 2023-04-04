@@ -19,8 +19,8 @@ export default function CarrerCard({cargo,description,src}: CarrerCardProps) {
         width={100}
         alt="vagas de emprego na smbencanadores"
       />
-      <h3 class="w-full pt-12 font-bold text-3xl uppercase">{cargo}</h3>
-      <p class="leading-4">{description}</p>
+      <h3 class="w-full pt-12 text-2xl uppercase font-grotesk font-bold ">{cargo}</h3>
+      <p class="leading-4 text-[16px] font-sans font-bold lg:text-[13px]">{description}</p>
     </div>
   );
 }

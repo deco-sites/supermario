@@ -34,6 +34,7 @@ export default function BrothersCTA(){
             src="/images/tv.webp"
             loading="lazy"
             preload="false"
+            decoding="async"
             height={100}
             width={100}
             alt="tv encanador"
@@ -44,6 +45,7 @@ export default function BrothersCTA(){
               src="/images/NovoProjeto.webp"
               loading="lazy"
               preload="false"
+              decoding="async"
               height={133}
               width={330}
               alt="tampa de esgoto"

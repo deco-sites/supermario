@@ -112,6 +112,7 @@ export default function HeroBanner(
             src="/images/certifiedsuper.webp"
             loading="lazy"
             preload="false"
+            decoding="async"
             height={100}
             width={100}
             alt="certificado dos irmãos"

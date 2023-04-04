@@ -22,11 +22,11 @@ export default function Atendimento() {
             <h2 class="font-bold text-[32px] lg:text-[48px] text-[#139c43]">
               Área de atendimento
             </h2>
-            <p class="text-[20px] py-4">
+            <p class="text-[20px] py-4 font-sans font-bold">
               Nós adoraríamos poder atender em qualquer lugar, mas nossa van se
               limita ao Booklyn e Queens no momento.
             </p>
-            <p class="text-[20px] py-4">
+            <p class="text-[20px] py-4 font-sans font-bold">
               Visite SMBEncanadores.com.br se quiser agendar um serviço com a
               gente
             </p>

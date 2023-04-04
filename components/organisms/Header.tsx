@@ -37,7 +37,7 @@ export default function Header({ imageProps}: Props) {
           <div class="w-auto flex justify-center items-start gap-2 p-0.5 text-[#B10C10] leading-[0.90rem] md:(items-center  leading-5)">
             <img
               class="w-8 h-8 max-w-[80px] max-h-[42px] md:(w-10 h-[38px])"
-              src="icons/contact.webp"
+              src="icons/contact1.webp"
               width="100"
               height="100"
               alt="contatar os imãos encanadores"

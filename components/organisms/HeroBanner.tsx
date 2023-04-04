@@ -66,7 +66,7 @@ export default function HeroBanner(
         : null}
       <div class="flex flex-col">
         <div class="w-full h-auto flex flex-col justify-start items-center 
-      md:(flex-row justify-around pt-8 pl-16)">
+      md:(flex-row justify-around pt-8)">
           <div class="flex flex-col items-center text-center p-[9px] uppercase font-grotesk text-[#242424]">
             
             <ImageHero
@@ -89,14 +89,14 @@ export default function HeroBanner(
             onClick={() => setIframeVisible(true)}
           >
             <picture loading="eager">
-              <source srcset={videoConfiguracoes?.poster} media="(min-width:800px)" width="800" height="300"/>
+              <source srcset={videoConfiguracoes?.poster} media="(min-width:755px)" width="800" height="300"/>
               <ImageHero
               {...imageProps}
               src={videoConfiguracoes?.posterMobile}
               altText={videoConfiguracoes?.altText}
               title={videoConfiguracoes?.seoTitle}
               preCarregarImagem={true}
-              className="p-0 object-contain w-full max-w-[830px] h-[300px] md:(w-screen h-[74vh]) lg:(relative -top-[35px])"
+              className="p-0 object-contain w-full max-w-[800px] h-[300px] md:(w-screen h-[70vh])"
             />
             </picture>
            

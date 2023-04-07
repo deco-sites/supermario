@@ -25,21 +25,21 @@ export default function Carreiras() {
             src="/icons/dispatcher.png"
         />
         <CarrerCard
-            key="atendente1234"
-            cargo="Atendente"
-            description="Somos inundados com chamados para serviços todos os dias e precisamos de alguém que nos ajude a não entrar pelo cano."
+            key="CONTADOR1234"
+            cargo="Contador"
+            description="Nós nos encarregamos de trazer as moedas enquanto você deixa tudo em ordem."
             src="/icons/bookkeeper.png"
         />
         <CarrerCard
-            key="atendente1234"
-            cargo="Atendente"
-            description="Somos inundados com chamados para serviços todos os dias e precisamos de alguém que nos ajude a não entrar pelo cano."
+            key="GERENTEDEMARKETING1234"
+            cargo="Gerente de marketing"
+            description="Acha que consegue tornar o Mario e o Luigi famosos?"
             src="/icons/marketing.png"
         />
         <CarrerCard
-            key="atendente1234"
-            cargo="Atendente"
-            description="Somos inundados com chamados para serviços todos os dias e precisamos de alguém que nos ajude a não entrar pelo cano."
+            key="motorista1234"
+            cargo="Motorista"
+            description="Precisa saber dirigir a nossa van- ou ajudar a empurrar se ela não quiser pegar. Estacionar no Brooklyn pode ser complicado, então nosso motorista deve respeitar as placas de estacionamento!"
             src="/icons/driver.png"
         />
       </div>
